@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /dashboard
+Disallow: /factory
+
+Sitemap: https://www.solve-for-x.net/sitemap.xml
