@@ -1,6 +1,6 @@
 {
   "mode": "static",
-  "generatedAt": "2026-07-10T23:43:42+00:00",
+  "generatedAt": "2026-07-10T23:51:16+00:00",
   "items": [
     {
       "id": "software-run-20260706T113219Z-soluni_care_companion",
@@ -16,7 +16,7 @@
       "evidenceRefs": [
         {
           "kind": "run",
-          "label": "Software Harness 20260706T113219Z-soluni_care_companion",
+          "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
           "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
           "exists": true
         }
@@ -26,13 +26,13 @@
           "id": "20260706T113219Z-soluni_care_companion-qa",
           "title": "모바일 QA",
           "status": "SKIPPED",
-          "nextAction": "dry-run 또는 skip 설정으로 mobile-harness QA를 건너뛰었습니다."
+          "nextAction": "dry-run 또는 건너뛰기 설정으로 모바일 QA를 건너뛰었습니다."
         },
         {
           "id": "20260706T113219Z-soluni_care_companion-milestone",
           "title": "마일스톤",
           "status": "open",
-          "nextAction": "진척도 80% · LOCAL_ONLY"
+          "nextAction": "진척도 80% · 로컬 전용"
         }
       ],
       "feedbackCount": 0,
@@ -56,7 +56,7 @@
       "evidenceRefs": [
         {
           "kind": "run",
-          "label": "Software Harness 20260706T113742Z-soluni_smoke_app_v2",
+          "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
           "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
           "exists": true
         }
@@ -66,13 +66,13 @@
           "id": "20260706T113742Z-soluni_smoke_app_v2-qa",
           "title": "모바일 QA",
           "status": "SKIPPED",
-          "nextAction": "dry-run 또는 skip 설정으로 mobile-harness QA를 건너뛰었습니다."
+          "nextAction": "dry-run 또는 건너뛰기 설정으로 모바일 QA를 건너뛰었습니다."
         },
         {
           "id": "20260706T113742Z-soluni_smoke_app_v2-milestone",
           "title": "마일스톤",
           "status": "open",
-          "nextAction": "진척도 80% · LOCAL_ONLY"
+          "nextAction": "진척도 80% · 로컬 전용"
         }
       ],
       "feedbackCount": 0,
@@ -91,7 +91,7 @@
       "status": "ACTION_REQUIRED",
       "summary": "소프트웨어 하네스 실행: 2 · 진행/승인 대기: 2 · 병목: QA 증거가 없음",
       "nextAction": "모바일 QA를 실행하고 화면 캡처·넘침 증거를 연결하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=operations",
       "evidenceRefs": [
         {
@@ -132,7 +132,7 @@
       "status": "UNAVAILABLE",
       "summary": "문의 접수: 데이터 없음 · 병목: 문의 원장이 없음",
       "nextAction": "공개 문의 입력 점검과 접수 데이터 저장을 확인하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=sales",
       "evidenceRefs": [],
       "subtasks": [
@@ -160,7 +160,7 @@
       "status": "UNAVAILABLE",
       "summary": "현금 포지션: 데이터 없음 · 병목: 재무 원장을 읽을 수 없음",
       "nextAction": "Finance_Transactions와 Finance_Cash 원장을 준비하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=finance",
       "evidenceRefs": [],
       "subtasks": [
@@ -188,7 +188,7 @@
       "status": "BROWSER_VERIFIED",
       "summary": "GA4 리포트: 브라우저 확인됨",
       "nextAction": "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=marketing",
       "evidenceRefs": [],
       "subtasks": [],
@@ -208,7 +208,7 @@
       "status": "WARN",
       "summary": "읽기 확인된 시스템: 5 · 병목: Umami 읽기 API 연결이 아직 없습니다.",
       "nextAction": "연결 상태를 먼저 해결한 뒤 숫자를 해석하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=data",
       "evidenceRefs": [
         {
@@ -271,7 +271,7 @@
       "status": "BLOCKED_EXTERNAL",
       "summary": "읽기 확인된 채널: 2 · 병목: Umami 읽기 API 연결이 아직 없습니다.",
       "nextAction": "Umami URL과 웹사이트 ID를 등록하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=distribution",
       "evidenceRefs": [
         {
@@ -349,7 +349,7 @@
       "status": "WARN",
       "summary": "실패/차단 실행: 0 · 병목: QA 건너뜀",
       "nextAction": "QA 증거와 승인 단계를 확인하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/company-ops?department=engineering",
       "evidenceRefs": [
         {
@@ -597,7 +597,7 @@
       "status": "WARN",
       "summary": "Vault 폴더·Registry 구조는 연결되었지만 실제 문서·계정·구독료 입력과 공유 권한은 별도 확인이 필요합니다.",
       "nextAction": "Registry를 채우고 제한 폴더의 공유 권한을 점검하세요.",
-      "updatedAt": "2026-07-10T23:43:42+00:00",
+      "updatedAt": "2026-07-10T23:51:16+00:00",
       "href": "/admin/business-admin",
       "evidenceRefs": [
         {
