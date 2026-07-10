@@ -1,16 +1,16 @@
 {
   "mode": "static",
-  "generatedAt": "2026-07-10T23:02:19+00:00",
+  "generatedAt": "2026-07-10T23:43:42+00:00",
   "items": [
     {
       "id": "software-run-20260706T113219Z-soluni_care_companion",
       "workstream": "software_harness",
-      "workstreamLabel": "Software Harness 납품",
+      "workstreamLabel": "소프트웨어 하네스 납품",
       "owner": "엔지니어링·운영",
       "title": "Soluni Care Companion",
       "status": "ACTION_REQUIRED",
-      "summary": "A caregiver needs a private daily check-in flow tailored to one family.",
-      "nextAction": "mobile-harness QA와 screenshot/overflow 증거를 연결하세요.",
+      "summary": "한 가족을 위한 비공개 일일 돌봄 확인 흐름이 필요합니다.",
+      "nextAction": "모바일 QA와 화면 넘침 증거를 연결하세요.",
       "updatedAt": "2026-07-06T11:32:19+00:00",
       "href": "/admin/software-harness?run=20260706T113219Z-soluni_care_companion",
       "evidenceRefs": [
@@ -24,13 +24,13 @@
       "subtasks": [
         {
           "id": "20260706T113219Z-soluni_care_companion-qa",
-          "title": "Mobile QA",
+          "title": "모바일 QA",
           "status": "SKIPPED",
           "nextAction": "dry-run 또는 skip 설정으로 mobile-harness QA를 건너뛰었습니다."
         },
         {
           "id": "20260706T113219Z-soluni_care_companion-milestone",
-          "title": "Milestone",
+          "title": "마일스톤",
           "status": "open",
           "nextAction": "진척도 80% · LOCAL_ONLY"
         }
@@ -39,18 +39,18 @@
       "freshness": "FRESH",
       "confidence": "MEDIUM",
       "businessImpact": "납품 품질·일정·고객 전달 판단",
-      "humanAction": "mobile-harness QA와 screenshot/overflow 증거를 연결하세요.",
+      "humanAction": "모바일 QA와 화면 넘침 증거를 연결하세요.",
       "requiresApproval": true
     },
     {
       "id": "software-run-20260706T113742Z-soluni_smoke_app_v2",
       "workstream": "software_harness",
-      "workstreamLabel": "Software Harness 납품",
+      "workstreamLabel": "소프트웨어 하네스 납품",
       "owner": "엔지니어링·운영",
       "title": "Soluni Smoke App V2",
       "status": "ACTION_REQUIRED",
-      "summary": "A founder needs a tiny mobile dashboard to track one custom software request.",
-      "nextAction": "mobile-harness QA와 screenshot/overflow 증거를 연결하세요.",
+      "summary": "대표가 하나의 맞춤형 소프트웨어 요청을 추적할 수 있는 작은 모바일 대시보드가 필요합니다.",
+      "nextAction": "모바일 QA와 화면 넘침 증거를 연결하세요.",
       "updatedAt": "2026-07-06T11:38:19+00:00",
       "href": "/admin/software-harness?run=20260706T113742Z-soluni_smoke_app_v2",
       "evidenceRefs": [
@@ -64,13 +64,13 @@
       "subtasks": [
         {
           "id": "20260706T113742Z-soluni_smoke_app_v2-qa",
-          "title": "Mobile QA",
+          "title": "모바일 QA",
           "status": "SKIPPED",
           "nextAction": "dry-run 또는 skip 설정으로 mobile-harness QA를 건너뛰었습니다."
         },
         {
           "id": "20260706T113742Z-soluni_smoke_app_v2-milestone",
-          "title": "Milestone",
+          "title": "마일스톤",
           "status": "open",
           "nextAction": "진척도 80% · LOCAL_ONLY"
         }
@@ -79,19 +79,19 @@
       "freshness": "FRESH",
       "confidence": "MEDIUM",
       "businessImpact": "납품 품질·일정·고객 전달 판단",
-      "humanAction": "mobile-harness QA와 screenshot/overflow 증거를 연결하세요.",
+      "humanAction": "모바일 QA와 화면 넘침 증거를 연결하세요.",
       "requiresApproval": true
     },
     {
       "id": "department-operations",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "운영",
       "title": "운영",
       "status": "ACTION_REQUIRED",
-      "summary": "Software Harness Run: 2 · 진행/승인 대기: 2 · 병목: QA 증거가 없음",
-      "nextAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "summary": "소프트웨어 하네스 실행: 2 · 진행/승인 대기: 2 · 병목: QA 증거가 없음",
+      "nextAction": "모바일 QA를 실행하고 화면 캡처·넘침 증거를 연결하세요.",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=operations",
       "evidenceRefs": [
         {
@@ -112,7 +112,7 @@
           "id": "ops-qa-skipped",
           "title": "2개 Run의 모바일 QA 증거가 없음",
           "status": "OPEN",
-          "nextAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
+          "nextAction": "모바일 QA를 실행하고 화면 캡처·넘침 증거를 연결하세요.",
           "requiresApproval": false
         }
       ],
@@ -120,27 +120,27 @@
       "freshness": "FRESH",
       "confidence": "MEDIUM",
       "businessImpact": "납품 생산성의 핵심 지표",
-      "humanAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
+      "humanAction": "모바일 QA를 실행하고 화면 캡처·넘침 증거를 연결하세요.",
       "requiresApproval": true
     },
     {
       "id": "department-sales",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "영업",
       "title": "영업",
       "status": "UNAVAILABLE",
-      "summary": "문의 접수: 0 · 병목: 문의 원장이 없음",
-      "nextAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "summary": "문의 접수: 데이터 없음 · 병목: 문의 원장이 없음",
+      "nextAction": "공개 문의 입력 점검과 접수 데이터 저장을 확인하세요.",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=sales",
       "evidenceRefs": [],
       "subtasks": [
         {
           "id": "sales-intake-missing",
-          "title": "영업 intake 원장 연결",
+          "title": "영업 접수 원장 연결",
           "status": "OPEN",
-          "nextAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
+          "nextAction": "공개 문의 입력 점검과 접수 데이터 저장을 확인하세요.",
           "requiresApproval": false
         }
       ],
@@ -148,19 +148,19 @@
       "freshness": "UNKNOWN",
       "confidence": "LOW",
       "businessImpact": "유료 진단·MVP 착수 판단의 입력",
-      "humanAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
+      "humanAction": "공개 문의 입력 점검과 접수 데이터 저장을 확인하세요.",
       "requiresApproval": true
     },
     {
       "id": "department-finance",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "재무",
       "title": "재무",
       "status": "UNAVAILABLE",
-      "summary": "현금 포지션: UNAVAILABLE · 병목: 재무 원장을 읽을 수 없음",
-      "nextAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "summary": "현금 포지션: 데이터 없음 · 병목: 재무 원장을 읽을 수 없음",
+      "nextAction": "Finance_Transactions와 Finance_Cash 원장을 준비하세요.",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=finance",
       "evidenceRefs": [],
       "subtasks": [
@@ -168,7 +168,7 @@
           "id": "finance-ledger-missing",
           "title": "재무 원장 연결",
           "status": "OPEN",
-          "nextAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
+          "nextAction": "Finance_Transactions와 Finance_Cash 원장을 준비하세요.",
           "requiresApproval": true
         }
       ],
@@ -176,49 +176,53 @@
       "freshness": "UNKNOWN",
       "confidence": "LOW",
       "businessImpact": "가격·지출·런웨이 판단",
-      "humanAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
+      "humanAction": "Finance_Transactions와 Finance_Cash 원장을 준비하세요.",
       "requiresApproval": true
     },
     {
       "id": "department-marketing",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "마케팅",
       "title": "마케팅",
       "status": "BROWSER_VERIFIED",
-      "summary": "GA4 리포트: UNAVAILABLE · 병목: GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
-      "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "summary": "GA4 리포트: 브라우저 확인됨",
+      "nextAction": "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=marketing",
       "evidenceRefs": [],
-      "subtasks": [
-        {
-          "id": "marketing-ga4-config",
-          "title": "GA4 서버 리포트 연결",
-          "status": "OPEN",
-          "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-          "requiresApproval": false
-        }
-      ],
+      "subtasks": [],
       "feedbackCount": 0,
       "freshness": "UNKNOWN",
       "confidence": "LOW",
       "businessImpact": "상담·스토어 클릭의 유입 품질 판단",
-      "humanAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-      "requiresApproval": true
+      "humanAction": "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
+      "requiresApproval": false
     },
     {
       "id": "department-data",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "데이터 분석",
       "title": "데이터 분석",
       "status": "WARN",
-      "summary": "Provider 연결: 0 · 병목: GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
+      "summary": "읽기 확인된 시스템: 5 · 병목: Umami 읽기 API 연결이 아직 없습니다.",
       "nextAction": "연결 상태를 먼저 해결한 뒤 숫자를 해석하세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=data",
       "evidenceRefs": [
+        {
+          "kind": "verification",
+          "label": "Google Drive 읽기 검증 기록",
+          "path": "docs/company_harness/read_verification.json",
+          "exists": true
+        },
+        {
+          "kind": "verification",
+          "label": "Google Sheets 읽기 검증 기록",
+          "path": "docs/company_harness/read_verification.json",
+          "exists": true
+        },
         {
           "kind": "verification",
           "label": "GA4 읽기 검증 기록",
@@ -241,6 +245,12 @@
           "kind": "report",
           "label": "ASC release status report",
           "path": "docs/reports/solve_for_x_store_release_2026_07_08.md",
+          "exists": true
+        },
+        {
+          "kind": "verification",
+          "label": "Firebase 읽기 검증 기록",
+          "path": "docs/company_harness/read_verification.json",
           "exists": true
         }
       ],
@@ -255,15 +265,27 @@
     {
       "id": "department-distribution",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
-      "owner": "Growth & Distribution",
-      "title": "Growth & Distribution",
+      "workstreamLabel": "회사 운영 부서",
+      "owner": "성장·유통",
+      "title": "성장·유통",
       "status": "BLOCKED_EXTERNAL",
-      "summary": "연결된 provider: 0 · 병목: GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
-      "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "summary": "읽기 확인된 채널: 2 · 병목: Umami 읽기 API 연결이 아직 없습니다.",
+      "nextAction": "Umami URL과 웹사이트 ID를 등록하세요.",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=distribution",
       "evidenceRefs": [
+        {
+          "kind": "verification",
+          "label": "Google Drive 읽기 검증 기록",
+          "path": "docs/company_harness/read_verification.json",
+          "exists": true
+        },
+        {
+          "kind": "verification",
+          "label": "Google Sheets 읽기 검증 기록",
+          "path": "docs/company_harness/read_verification.json",
+          "exists": true
+        },
         {
           "kind": "verification",
           "label": "GA4 읽기 검증 기록",
@@ -287,28 +309,20 @@
           "label": "ASC release status report",
           "path": "docs/reports/solve_for_x_store_release_2026_07_08.md",
           "exists": true
+        },
+        {
+          "kind": "verification",
+          "label": "Firebase 읽기 검증 기록",
+          "path": "docs/company_harness/read_verification.json",
+          "exists": true
         }
       ],
       "subtasks": [
-        {
-          "id": "distribution-ga4",
-          "title": "GA4 연결 상태 해결",
-          "status": "OPEN",
-          "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-          "requiresApproval": false
-        },
         {
           "id": "distribution-umami",
           "title": "Umami 연결 상태 해결",
           "status": "OPEN",
           "nextAction": "Umami URL과 웹사이트 ID를 등록하세요.",
-          "requiresApproval": false
-        },
-        {
-          "id": "distribution-google-play",
-          "title": "Google Play 연결 상태 해결",
-          "status": "OPEN",
-          "nextAction": "프로덕션 공개·테스트 트랙 변경은 대표 승인 후 진행하세요.",
           "requiresApproval": false
         },
         {
@@ -323,19 +337,19 @@
       "freshness": "FRESH",
       "confidence": "MEDIUM",
       "businessImpact": "릴리즈·심사·스토어 매출 판단",
-      "humanAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
+      "humanAction": "Umami URL과 웹사이트 ID를 등록하세요.",
       "requiresApproval": true
     },
     {
       "id": "department-engineering",
       "workstream": "company_ops",
-      "workstreamLabel": "Company Ops 부서",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "엔지니어링",
       "title": "엔지니어링",
       "status": "WARN",
       "summary": "실패/차단 실행: 0 · 병목: QA 건너뜀",
       "nextAction": "QA 증거와 승인 단계를 확인하세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/company-ops?department=engineering",
       "evidenceRefs": [
         {
@@ -366,8 +380,8 @@
       "owner": "대표·관리자",
       "title": "Google Drive 연결",
       "status": "READ_VERIFIED",
-      "summary": "연결된 Drive 읽기에서 Vault와 10개 관리 폴더를 읽었습니다. 현재 Chrome 로그인 계정에서는 같은 폴더 접근 권한이 확인되지 않았고, 실제 원문 문서 수와 restricted 권한은 별도 확인이 필요합니다.",
-      "nextAction": "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 restricted 폴더 공유 권한을 다시 확인하세요.",
+      "summary": "연결된 Drive 읽기에서 Vault와 10개 관리 폴더를 읽었습니다. 현재 Chrome 로그인 계정에서는 같은 폴더 접근 권한이 확인되지 않았고, 실제 원문 문서 수와 제한 폴더 권한은 별도 확인이 필요합니다.",
+      "nextAction": "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 제한 폴더 공유 권한을 다시 확인하세요.",
       "updatedAt": "2026-07-10T14:00:08Z",
       "href": "/admin/company-ops",
       "evidenceRefs": [
@@ -383,7 +397,7 @@
       "freshness": "FRESH",
       "confidence": "HIGH",
       "businessImpact": "Google Drive 데이터가 회사 판단에 미치는 영향",
-      "humanAction": "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 restricted 폴더 공유 권한을 다시 확인하세요.",
+      "humanAction": "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 제한 폴더 공유 권한을 다시 확인하세요.",
       "requiresApproval": false,
       "readScope": "SFX Business Admin Vault metadata",
       "recordCount": 10,
@@ -426,8 +440,8 @@
       "owner": "데이터·마케팅·스토어",
       "title": "GA4 연결",
       "status": "BROWSER_VERIFIED",
-      "summary": "GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
-      "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
+      "summary": "GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 보고서 API 연결은 별도입니다.",
+      "nextAction": "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
       "updatedAt": "2026-07-10T14:00:08Z",
       "href": "/admin/company-ops",
       "evidenceRefs": [
@@ -443,7 +457,7 @@
       "freshness": "FRESH",
       "confidence": "HIGH",
       "businessImpact": "GA4 데이터가 회사 판단에 미치는 영향",
-      "humanAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
+      "humanAction": "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
       "requiresApproval": false,
       "readScope": "solve-for-x-core Property 홈·최근 7일 이벤트 요약",
       "recordCount": 7,
@@ -456,7 +470,7 @@
       "owner": "데이터·마케팅·스토어",
       "title": "Umami 연결",
       "status": "UNAVAILABLE",
-      "summary": "Umami read API 연결이 아직 없습니다.",
+      "summary": "Umami 읽기 API 연결이 아직 없습니다.",
       "nextAction": "Umami URL과 웹사이트 ID를 등록하세요.",
       "updatedAt": "UNKNOWN",
       "href": "/admin/company-ops",
@@ -546,8 +560,8 @@
     },
     {
       "id": "connector-firebase",
-      "workstream": "growth_distribution",
-      "workstreamLabel": "데이터·마케팅·스토어",
+      "workstream": "company_ops",
+      "workstreamLabel": "회사 운영 부서",
       "owner": "엔지니어링·운영",
       "title": "Firebase 연결",
       "status": "BROWSER_VERIFIED",
@@ -577,18 +591,18 @@
     {
       "id": "business-admin-vault",
       "workstream": "business_admin",
-      "workstreamLabel": "Business Admin Vault",
+      "workstreamLabel": "사업자 문서·계정",
       "owner": "대표·관리자",
-      "title": "SFX Business Admin Vault",
+      "title": "SFX 사업자 문서·계정 보관함",
       "status": "WARN",
       "summary": "Vault 폴더·Registry 구조는 연결되었지만 실제 문서·계정·구독료 입력과 공유 권한은 별도 확인이 필요합니다.",
-      "nextAction": "Registry를 채우고 restricted 폴더의 공유 권한을 점검하세요.",
-      "updatedAt": "2026-07-10T23:02:19+00:00",
+      "nextAction": "Registry를 채우고 제한 폴더의 공유 권한을 점검하세요.",
+      "updatedAt": "2026-07-10T23:43:42+00:00",
       "href": "/admin/business-admin",
       "evidenceRefs": [
         {
           "kind": "config",
-          "label": "Business Admin Vault config",
+          "label": "사업자 문서·계정 설정",
           "path": "docs/company_harness/business_admin_vault.json",
           "exists": true
         }
@@ -648,19 +662,19 @@
   },
   "sourceHealth": [
     {
-      "source": "Company Ops snapshot",
+      "source": "회사 운영 요약",
       "status": "PASS",
       "message": "7개 부서 상태를 읽었습니다."
     },
     {
-      "source": "Software Harness runs",
+      "source": "소프트웨어 하네스 실행",
       "status": "PASS",
-      "message": "2개 run을 읽었습니다."
+      "message": "2개 실행을 읽었습니다."
     },
     {
       "source": "Google Drive",
       "status": "READ_VERIFIED",
-      "message": "연결된 Drive 읽기에서 Vault와 10개 관리 폴더를 읽었습니다. 현재 Chrome 로그인 계정에서는 같은 폴더 접근 권한이 확인되지 않았고, 실제 원문 문서 수와 restricted 권한은 별도 확인이 필요합니다."
+      "message": "연결된 Drive 읽기에서 Vault와 10개 관리 폴더를 읽었습니다. 현재 Chrome 로그인 계정에서는 같은 폴더 접근 권한이 확인되지 않았고, 실제 원문 문서 수와 제한 폴더 권한은 별도 확인이 필요합니다."
     },
     {
       "source": "Google Sheets",
@@ -670,12 +684,12 @@
     {
       "source": "GA4",
       "status": "BROWSER_VERIFIED",
-      "message": "GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다."
+      "message": "GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 보고서 API 연결은 별도입니다."
     },
     {
       "source": "Umami",
       "status": "UNAVAILABLE",
-      "message": "Umami read API 연결이 아직 없습니다."
+      "message": "Umami 읽기 API 연결이 아직 없습니다."
     },
     {
       "source": "Google Play",
@@ -693,7 +707,7 @@
       "message": "Firebase Console에 브라우저로 접근했고 solve-for-x-core 프로젝트, 웹 앱, Authentication·SQL Connect 메뉴를 확인했습니다."
     },
     {
-      "source": "Business Admin Vault",
+      "source": "사업자 문서·계정",
       "status": "WARN",
       "message": "구조는 확인했지만 원문·Registry 입력은 별도 검증이 필요합니다."
     }
