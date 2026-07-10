@@ -1,6 +1,6 @@
 {
   "mode": "static",
-  "generatedAt": "2026-07-10T22:55:25+00:00",
+  "generatedAt": "2026-07-10T23:02:19+00:00",
   "items": [
     {
       "id": "software-run-20260706T113219Z-soluni_care_companion",
@@ -91,7 +91,7 @@
       "status": "ACTION_REQUIRED",
       "summary": "Software Harness Run: 2 · 진행/승인 대기: 2 · 병목: QA 증거가 없음",
       "nextAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=operations",
       "evidenceRefs": [
         {
@@ -132,7 +132,7 @@
       "status": "UNAVAILABLE",
       "summary": "문의 접수: 0 · 병목: 문의 원장이 없음",
       "nextAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=sales",
       "evidenceRefs": [],
       "subtasks": [
@@ -160,7 +160,7 @@
       "status": "UNAVAILABLE",
       "summary": "현금 포지션: UNAVAILABLE · 병목: 재무 원장을 읽을 수 없음",
       "nextAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=finance",
       "evidenceRefs": [],
       "subtasks": [
@@ -188,7 +188,7 @@
       "status": "BROWSER_VERIFIED",
       "summary": "GA4 리포트: UNAVAILABLE · 병목: GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
       "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=marketing",
       "evidenceRefs": [],
       "subtasks": [
@@ -216,7 +216,7 @@
       "status": "WARN",
       "summary": "Provider 연결: 0 · 병목: GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
       "nextAction": "연결 상태를 먼저 해결한 뒤 숫자를 해석하세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=data",
       "evidenceRefs": [
         {
@@ -261,7 +261,7 @@
       "status": "BLOCKED_EXTERNAL",
       "summary": "연결된 provider: 0 · 병목: GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 Data API 연결은 별도입니다.",
       "nextAction": "GA4 Data API read-only credential을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=distribution",
       "evidenceRefs": [
         {
@@ -335,7 +335,7 @@
       "status": "WARN",
       "summary": "실패/차단 실행: 0 · 병목: QA 건너뜀",
       "nextAction": "QA 증거와 승인 단계를 확인하세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/company-ops?department=engineering",
       "evidenceRefs": [
         {
@@ -583,7 +583,7 @@
       "status": "WARN",
       "summary": "Vault 폴더·Registry 구조는 연결되었지만 실제 문서·계정·구독료 입력과 공유 권한은 별도 확인이 필요합니다.",
       "nextAction": "Registry를 채우고 restricted 폴더의 공유 권한을 점검하세요.",
-      "updatedAt": "2026-07-10T22:55:25+00:00",
+      "updatedAt": "2026-07-10T23:02:19+00:00",
       "href": "/admin/business-admin",
       "evidenceRefs": [
         {
