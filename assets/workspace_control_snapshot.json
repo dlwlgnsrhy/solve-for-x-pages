@@ -1,6 +1,6 @@
 {
   "mode": "static",
-  "generatedAt": "2026-07-10T12:14:47+00:00",
+  "generatedAt": "2026-07-10T12:24:24+00:00",
   "items": [
     {
       "id": "software-run-20260706T113219Z-soluni_care_companion",
@@ -81,7 +81,7 @@
       "status": "ACTION_REQUIRED",
       "summary": "Software Harness Run: 2 · 진행/승인 대기: 2 · 병목: QA evidence missing",
       "nextAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=operations",
       "evidenceRefs": [
         {
@@ -117,7 +117,7 @@
       "status": "UNAVAILABLE",
       "summary": "문의 접수: 0 · 병목: No intake records",
       "nextAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=sales",
       "evidenceRefs": [],
       "subtasks": [
@@ -140,7 +140,7 @@
       "status": "UNAVAILABLE",
       "summary": "현금 포지션: UNAVAILABLE · 병목: Finance ledger unavailable",
       "nextAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=finance",
       "evidenceRefs": [],
       "subtasks": [
@@ -163,7 +163,7 @@
       "status": "UNAVAILABLE",
       "summary": "GA4 report: UNAVAILABLE · 병목: Brand-web event code exists, but Property ID/service-account reporting is not configured.",
       "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=marketing",
       "evidenceRefs": [],
       "subtasks": [
@@ -186,7 +186,7 @@
       "status": "WARN",
       "summary": "Provider 연결: 0 · 병목: Brand-web event code exists, but Property ID/service-account reporting is not configured.",
       "nextAction": "연결 상태를 먼저 해결한 뒤 숫자를 해석하세요.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=data",
       "evidenceRefs": [
         {
@@ -208,7 +208,7 @@
       "status": "BLOCKED_EXTERNAL",
       "summary": "연결된 provider: 0 · 병목: Brand-web event code exists, but Property ID/service-account reporting is not configured.",
       "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=distribution",
       "evidenceRefs": [
         {
@@ -259,7 +259,7 @@
       "status": "WARN",
       "summary": "실패/차단 Run: 0 · 병목: QA skipped",
       "nextAction": "QA evidence와 승인 gate를 확인하세요.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/company-ops?department=engineering",
       "evidenceRefs": [
         {
@@ -354,7 +354,7 @@
       "status": "WARN",
       "summary": "Vault 폴더·Registry 구조는 연결되었지만 실제 문서·계정·구독료 입력과 공유 권한은 별도 확인이 필요합니다.",
       "nextAction": "Registry를 채우고 restricted 폴더의 공유 권한을 점검하세요.",
-      "updatedAt": "2026-07-10T12:14:47+00:00",
+      "updatedAt": "2026-07-10T12:24:24+00:00",
       "href": "/admin/business-admin",
       "evidenceRefs": [
         {
