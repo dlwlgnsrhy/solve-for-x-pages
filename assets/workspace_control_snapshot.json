@@ -1,0 +1,433 @@
+{
+  "mode": "static",
+  "generatedAt": "2026-07-10T12:08:07+00:00",
+  "items": [
+    {
+      "id": "software-run-20260706T113219Z-soluni_care_companion",
+      "workstream": "software_harness",
+      "workstreamLabel": "Software Harness 납품",
+      "owner": "엔지니어링·운영",
+      "title": "Soluni Care Companion",
+      "status": "ACTION_REQUIRED",
+      "summary": "A caregiver needs a private daily check-in flow tailored to one family.",
+      "nextAction": "mobile-harness QA와 screenshot/overflow 증거를 연결하세요.",
+      "updatedAt": "2026-07-06T11:32:19+00:00",
+      "href": "/admin/software-harness?run=20260706T113219Z-soluni_care_companion",
+      "evidenceRefs": [
+        {
+          "kind": "run",
+          "label": "Software Harness 20260706T113219Z-soluni_care_companion",
+          "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
+          "exists": true
+        }
+      ],
+      "subtasks": [
+        {
+          "id": "20260706T113219Z-soluni_care_companion-qa",
+          "title": "Mobile QA",
+          "status": "SKIPPED",
+          "nextAction": "dry-run 또는 skip 설정으로 mobile-harness QA를 건너뛰었습니다."
+        },
+        {
+          "id": "20260706T113219Z-soluni_care_companion-milestone",
+          "title": "Milestone",
+          "status": "open",
+          "nextAction": "진척도 80% · LOCAL_ONLY"
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "software-run-20260706T113742Z-soluni_smoke_app_v2",
+      "workstream": "software_harness",
+      "workstreamLabel": "Software Harness 납품",
+      "owner": "엔지니어링·운영",
+      "title": "Soluni Smoke App V2",
+      "status": "ACTION_REQUIRED",
+      "summary": "A founder needs a tiny mobile dashboard to track one custom software request.",
+      "nextAction": "mobile-harness QA와 screenshot/overflow 증거를 연결하세요.",
+      "updatedAt": "2026-07-06T11:38:19+00:00",
+      "href": "/admin/software-harness?run=20260706T113742Z-soluni_smoke_app_v2",
+      "evidenceRefs": [
+        {
+          "kind": "run",
+          "label": "Software Harness 20260706T113742Z-soluni_smoke_app_v2",
+          "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
+          "exists": true
+        }
+      ],
+      "subtasks": [
+        {
+          "id": "20260706T113742Z-soluni_smoke_app_v2-qa",
+          "title": "Mobile QA",
+          "status": "SKIPPED",
+          "nextAction": "dry-run 또는 skip 설정으로 mobile-harness QA를 건너뛰었습니다."
+        },
+        {
+          "id": "20260706T113742Z-soluni_smoke_app_v2-milestone",
+          "title": "Milestone",
+          "status": "open",
+          "nextAction": "진척도 80% · LOCAL_ONLY"
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-operations",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "운영",
+      "title": "운영",
+      "status": "ACTION_REQUIRED",
+      "summary": "Software Harness Run: 2 · 진행/승인 대기: 2 · 병목: QA evidence missing",
+      "nextAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=operations",
+      "evidenceRefs": [
+        {
+          "kind": "run",
+          "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+          "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
+          "exists": true
+        },
+        {
+          "kind": "run",
+          "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+          "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
+          "exists": true
+        }
+      ],
+      "subtasks": [
+        {
+          "id": "ops-qa-skipped",
+          "title": "2개 Run의 모바일 QA 증거가 없음",
+          "status": "OPEN",
+          "nextAction": "mobile-harness를 실행하고 screenshot/overflow 증거를 연결하세요.",
+          "requiresApproval": false
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-sales",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "영업",
+      "title": "영업",
+      "status": "UNAVAILABLE",
+      "summary": "문의 접수: 0 · 병목: No intake records",
+      "nextAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=sales",
+      "evidenceRefs": [],
+      "subtasks": [
+        {
+          "id": "sales-intake-missing",
+          "title": "영업 intake 원장 연결",
+          "status": "OPEN",
+          "nextAction": "public intake smoke와 intake JSON 저장을 확인하세요.",
+          "requiresApproval": false
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-finance",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "재무",
+      "title": "재무",
+      "status": "UNAVAILABLE",
+      "summary": "현금 포지션: UNAVAILABLE · 병목: Finance ledger unavailable",
+      "nextAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=finance",
+      "evidenceRefs": [],
+      "subtasks": [
+        {
+          "id": "finance-ledger-missing",
+          "title": "재무 원장 연결",
+          "status": "OPEN",
+          "nextAction": "Finance_Transactions와 Finance_Cash를 준비하세요.",
+          "requiresApproval": true
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-marketing",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "마케팅",
+      "title": "마케팅",
+      "status": "UNAVAILABLE",
+      "summary": "GA4 report: UNAVAILABLE · 병목: Brand-web event code exists, but Property ID/service-account reporting is not configured.",
+      "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=marketing",
+      "evidenceRefs": [],
+      "subtasks": [
+        {
+          "id": "marketing-ga4-config",
+          "title": "GA4 서버 리포트 연결",
+          "status": "OPEN",
+          "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
+          "requiresApproval": false
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-data",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "데이터 분석",
+      "title": "데이터 분석",
+      "status": "WARN",
+      "summary": "Provider 연결: 0 · 병목: Brand-web event code exists, but Property ID/service-account reporting is not configured.",
+      "nextAction": "연결 상태를 먼저 해결한 뒤 숫자를 해석하세요.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=data",
+      "evidenceRefs": [
+        {
+          "kind": "report",
+          "label": "ASC release status report",
+          "path": "docs/reports/solve_for_x_store_release_2026_07_08.md",
+          "exists": true
+        }
+      ],
+      "subtasks": [],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-distribution",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "Growth & Distribution",
+      "title": "Growth & Distribution",
+      "status": "BLOCKED_EXTERNAL",
+      "summary": "연결된 provider: 0 · 병목: Brand-web event code exists, but Property ID/service-account reporting is not configured.",
+      "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=distribution",
+      "evidenceRefs": [
+        {
+          "kind": "report",
+          "label": "ASC release status report",
+          "path": "docs/reports/solve_for_x_store_release_2026_07_08.md",
+          "exists": true
+        }
+      ],
+      "subtasks": [
+        {
+          "id": "distribution-ga4",
+          "title": "GA4 연결 상태 해결",
+          "status": "OPEN",
+          "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
+          "requiresApproval": false
+        },
+        {
+          "id": "distribution-umami",
+          "title": "Umami 연결 상태 해결",
+          "status": "OPEN",
+          "nextAction": "Set UMAMI_BASE_URL and UMAMI_WEBSITE_IDS for a read-only event report.",
+          "requiresApproval": false
+        },
+        {
+          "id": "distribution-google-play",
+          "title": "Google Play 연결 상태 해결",
+          "status": "OPEN",
+          "nextAction": "Provide a read-only service-account configuration outside Git.",
+          "requiresApproval": false
+        },
+        {
+          "id": "distribution-app-store-connect",
+          "title": "App Store Connect 연결 상태 해결",
+          "status": "OPEN",
+          "nextAction": "Resolve Apple Developer agreements/Business/DSA status before retrying the API.",
+          "requiresApproval": true
+        }
+      ],
+      "feedbackCount": 0
+    },
+    {
+      "id": "department-engineering",
+      "workstream": "company_ops",
+      "workstreamLabel": "Company Ops 부서",
+      "owner": "엔지니어링",
+      "title": "엔지니어링",
+      "status": "WARN",
+      "summary": "실패/차단 Run: 0 · 병목: QA skipped",
+      "nextAction": "QA evidence와 승인 gate를 확인하세요.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/company-ops?department=engineering",
+      "evidenceRefs": [
+        {
+          "kind": "run",
+          "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+          "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
+          "exists": true
+        },
+        {
+          "kind": "run",
+          "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+          "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
+          "exists": true
+        }
+      ],
+      "subtasks": [],
+      "feedbackCount": 0
+    },
+    {
+      "id": "connector-ga4",
+      "workstream": "growth_distribution",
+      "workstreamLabel": "Growth & Distribution",
+      "owner": "데이터·마케팅·스토어",
+      "title": "GA4 연결",
+      "status": "UNAVAILABLE",
+      "summary": "Brand-web event code exists, but Property ID/service-account reporting is not configured.",
+      "nextAction": "Run a read-only GA4 report smoke after setting GA4_PROPERTY_ID and credentials.",
+      "updatedAt": "UNKNOWN",
+      "href": "/admin/company-ops",
+      "evidenceRefs": [],
+      "subtasks": [],
+      "feedbackCount": 0
+    },
+    {
+      "id": "connector-umami",
+      "workstream": "growth_distribution",
+      "workstreamLabel": "Growth & Distribution",
+      "owner": "데이터·마케팅·스토어",
+      "title": "Umami 연결",
+      "status": "UNAVAILABLE",
+      "summary": "Mobile telemetry sender exists, but read API configuration is missing.",
+      "nextAction": "Set UMAMI_BASE_URL and UMAMI_WEBSITE_IDS for a read-only event report.",
+      "updatedAt": "UNKNOWN",
+      "href": "/admin/company-ops",
+      "evidenceRefs": [],
+      "subtasks": [],
+      "feedbackCount": 0
+    },
+    {
+      "id": "connector-google-play",
+      "workstream": "growth_distribution",
+      "workstreamLabel": "Growth & Distribution",
+      "owner": "데이터·마케팅·스토어",
+      "title": "Google Play 연결",
+      "status": "UNAVAILABLE",
+      "summary": "Fastlane lanes exist, but a read adapter credential was not found.",
+      "nextAction": "Provide a read-only service-account configuration outside Git.",
+      "updatedAt": "UNKNOWN",
+      "href": "/admin/company-ops",
+      "evidenceRefs": [],
+      "subtasks": [],
+      "feedbackCount": 0
+    },
+    {
+      "id": "connector-app-store-connect",
+      "workstream": "growth_distribution",
+      "workstreamLabel": "Growth & Distribution",
+      "owner": "데이터·마케팅·스토어",
+      "title": "App Store Connect 연결",
+      "status": "BLOCKED_EXTERNAL",
+      "summary": "The latest release report records an external agreement/business gate.",
+      "nextAction": "Resolve Apple Developer agreements/Business/DSA status before retrying the API.",
+      "updatedAt": "UNKNOWN",
+      "href": "/admin/company-ops",
+      "evidenceRefs": [
+        {
+          "kind": "report",
+          "label": "스토어 release status report",
+          "path": "docs/reports/solve_for_x_store_release_2026_07_08.md",
+          "exists": true
+        }
+      ],
+      "subtasks": [],
+      "feedbackCount": 0
+    },
+    {
+      "id": "business-admin-vault",
+      "workstream": "business_admin",
+      "workstreamLabel": "Business Admin Vault",
+      "owner": "대표·관리자",
+      "title": "SFX Business Admin Vault",
+      "status": "WARN",
+      "summary": "Vault 폴더·Registry 구조는 연결되었지만 실제 문서·계정·구독료 입력과 공유 권한은 별도 확인이 필요합니다.",
+      "nextAction": "Registry를 채우고 restricted 폴더의 공유 권한을 점검하세요.",
+      "updatedAt": "2026-07-10T12:08:07+00:00",
+      "href": "/admin/business-admin",
+      "evidenceRefs": [
+        {
+          "kind": "config",
+          "label": "Business Admin Vault config",
+          "path": "docs/company_harness/business_admin_vault.json",
+          "exists": true
+        }
+      ],
+      "subtasks": [
+        {
+          "id": "vault-Document_Registry",
+          "title": "Document_Registry",
+          "status": "NOT_VERIFIED",
+          "nextAction": "사업자 문서 한글/영문, 발급일, 만료일, 민감도, 원문 링크"
+        },
+        {
+          "id": "vault-Account_Registry",
+          "title": "Account_Registry",
+          "status": "NOT_VERIFIED",
+          "nextAction": "서비스 계정, 로그인 alias, MFA 책임자, credential 위치"
+        },
+        {
+          "id": "vault-Subscription_Registry",
+          "title": "Subscription_Registry",
+          "status": "NOT_VERIFIED",
+          "nextAction": "월 구독료, 결제주기, 다음 결제일, 해지 검토일"
+        },
+        {
+          "id": "vault-Identifier_Registry",
+          "title": "Identifier_Registry",
+          "status": "NOT_VERIFIED",
+          "nextAction": "DUNS/DNUS 등 외부 식별자와 증거 링크"
+        },
+        {
+          "id": "vault-Renewal_Calendar",
+          "title": "Renewal_Calendar",
+          "status": "NOT_VERIFIED",
+          "nextAction": "문서·계약·구독·인증서 갱신 일정"
+        },
+        {
+          "id": "vault-Decision_Log",
+          "title": "Decision_Log",
+          "status": "NOT_VERIFIED",
+          "nextAction": "사람의 승인·해지·갱신 결정과 근거"
+        }
+      ],
+      "feedbackCount": 0
+    }
+  ],
+  "counts": {
+    "total": 14,
+    "actionRequired": 3,
+    "blocked": 2,
+    "warnings": 9,
+    "pass": 0
+  },
+  "sourceHealth": [
+    {
+      "source": "Company Ops snapshot",
+      "status": "PASS",
+      "message": "7개 부서 상태를 읽었습니다."
+    },
+    {
+      "source": "Software Harness runs",
+      "status": "PASS",
+      "message": "2개 run을 읽었습니다."
+    },
+    {
+      "source": "Business Admin Vault",
+      "status": "WARN",
+      "message": "구조는 확인했지만 원문·Registry 입력은 별도 검증이 필요합니다."
+    }
+  ],
+  "feedback": []
+}
