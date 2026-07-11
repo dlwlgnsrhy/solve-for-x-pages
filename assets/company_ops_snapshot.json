@@ -1,6 +1,6 @@
 {
-  "snapshot_id": "company-20260710T235557Z",
-  "as_of": "2026-07-10T23:55:57+00:00",
+  "snapshot_id": "company-20260711T000132Z",
+  "as_of": "2026-07-11T00:01:32+00:00",
   "period": "daily",
   "north_star": {
     "id": "delivery_lead_time",
@@ -14,13 +14,13 @@
     "source_refs": [
       {
         "kind": "run",
-        "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+        "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
         "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
         "exists": true
       },
       {
         "kind": "run",
-        "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+        "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
         "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
         "exists": true
       }
@@ -44,13 +44,13 @@
           "source_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -68,13 +68,13 @@
           "source_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -92,13 +92,13 @@
           "source_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -119,13 +119,13 @@
           "evidence_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -138,13 +138,13 @@
       "evidence_refs": [
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+          "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
           "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
           "exists": true
         },
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+          "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
           "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
           "exists": true
         }
@@ -155,7 +155,7 @@
           "title": "검증된 납품 생산성",
           "status": "ACTION_REQUIRED",
           "facts": [
-            "Software Harness 실행 수: 2",
+            "소프트웨어 하네스 실행 수: 2",
             "진행 중/승인 대기: 2",
             "차단/실패: 0",
             "QA 건너뜀: 2"
@@ -169,13 +169,13 @@
           "evidence_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -188,7 +188,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     },
     {
       "department_id": "sales",
@@ -231,7 +231,7 @@
           "title": "영업 파이프라인",
           "status": "UNAVAILABLE",
           "facts": [
-            "Lead Intake records: 0"
+            "문의 접수 원장: 0"
           ],
           "interpretations": [
             "현재 저장소에 접수 원장이 없으면 유료 전환이나 파이프라인을 판단할 수 없습니다."
@@ -248,7 +248,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     },
     {
       "department_id": "finance",
@@ -297,7 +297,7 @@
             "현재는 현금·수익·미수금을 회사 상태로 해석할 수 없습니다."
           ],
           "recommendations": [
-            "SFX Company OS의 Finance_Transactions와 Finance_Cash 원장을 연결하세요."
+            "SFX 회사 운영 시스템의 재무 거래 원장과 현금 원장을 연결하세요."
           ],
           "evidence_refs": [],
           "freshness": "UNKNOWN",
@@ -308,7 +308,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     },
     {
       "department_id": "marketing",
@@ -354,7 +354,7 @@
           "decision_status": "NOT_REQUIRED"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     },
     {
       "department_id": "data",
@@ -543,7 +543,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     },
     {
       "department_id": "distribution",
@@ -837,7 +837,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     },
     {
       "department_id": "engineering",
@@ -856,13 +856,13 @@
           "source_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -877,13 +877,13 @@
       "evidence_refs": [
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+          "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
           "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
           "exists": true
         },
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+          "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
           "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
           "exists": true
         }
@@ -907,13 +907,13 @@
           "evidence_refs": [
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+              "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
               "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
               "exists": true
             },
             {
               "kind": "run",
-              "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+              "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
               "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
               "exists": true
             }
@@ -926,7 +926,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-10T23:55:57+00:00"
+      "refreshed_at": "2026-07-11T00:01:32+00:00"
     }
   ],
   "connector_health": [
@@ -993,7 +993,7 @@
       "title": "검증된 납품 생산성",
       "status": "ACTION_REQUIRED",
       "facts": [
-        "Software Harness 실행 수: 2",
+        "소프트웨어 하네스 실행 수: 2",
         "진행 중/승인 대기: 2",
         "차단/실패: 0",
         "QA 건너뜀: 2"
@@ -1007,13 +1007,13 @@
       "evidence_refs": [
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+          "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
           "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
           "exists": true
         },
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+          "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
           "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
           "exists": true
         }
@@ -1030,7 +1030,7 @@
       "title": "영업 파이프라인",
       "status": "UNAVAILABLE",
       "facts": [
-        "Lead Intake records: 0"
+        "문의 접수 원장: 0"
       ],
       "interpretations": [
         "현재 저장소에 접수 원장이 없으면 유료 전환이나 파이프라인을 판단할 수 없습니다."
@@ -1057,7 +1057,7 @@
         "현재는 현금·수익·미수금을 회사 상태로 해석할 수 없습니다."
       ],
       "recommendations": [
-        "SFX Company OS의 Finance_Transactions와 Finance_Cash 원장을 연결하세요."
+        "SFX 회사 운영 시스템의 재무 거래 원장과 현금 원장을 연결하세요."
       ],
       "evidence_refs": [],
       "freshness": "UNKNOWN",
@@ -1253,13 +1253,13 @@
       "evidence_refs": [
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113219Z-soluni_care_companion",
+          "label": "소프트웨어 하네스 실행 20260706T113219Z-soluni_care_companion",
           "path": "docs/software_harness_runs/20260706T113219Z-soluni_care_companion/run.json",
           "exists": true
         },
         {
           "kind": "run",
-          "label": "Software Harness run 20260706T113742Z-soluni_smoke_app_v2",
+          "label": "소프트웨어 하네스 실행 20260706T113742Z-soluni_smoke_app_v2",
           "path": "docs/software_harness_runs/20260706T113742Z-soluni_smoke_app_v2/run.json",
           "exists": true
         }
@@ -1272,5 +1272,5 @@
       "decision_status": "PENDING"
     }
   ],
-  "generated_at": "2026-07-10T23:55:57+00:00"
+  "generated_at": "2026-07-11T00:01:32+00:00"
 }
