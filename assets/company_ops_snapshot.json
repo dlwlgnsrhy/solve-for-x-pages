@@ -1,6 +1,6 @@
 {
-  "snapshot_id": "company-20260711T050413Z",
-  "as_of": "2026-07-11T05:04:13+00:00",
+  "snapshot_id": "company-20260711T092414Z",
+  "as_of": "2026-07-11T09:24:14+00:00",
   "period": "daily",
   "north_star": {
     "id": "delivery_lead_time",
@@ -188,7 +188,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     },
     {
       "department_id": "sales",
@@ -248,7 +248,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     },
     {
       "department_id": "finance",
@@ -272,9 +272,9 @@
           "id": "finance-ledger-missing",
           "department": "finance",
           "priority": "HIGH",
-          "title": "재무 원장 연결",
-          "reason": "현금과 수익 데이터가 없습니다.",
-          "next_action": "Finance_Transactions와 Finance_Cash 원장을 준비하세요.",
+          "title": "재무·비용 원장 확인",
+          "reason": "현재 기간의 현금·비용·정산 데이터가 없습니다.",
+          "next_action": "/admin/finance에서 원천 연결과 실제 행을 확인하세요.",
           "status": "OPEN",
           "requires_approval": true,
           "due_at": null,
@@ -282,33 +282,33 @@
         }
       ],
       "blockers": [
-        "재무 원장을 읽을 수 없음"
+        "재무·비용 원장을 읽을 수 없음"
       ],
       "evidence_refs": [],
       "results": [
         {
           "result_id": "finance-ledger-coverage",
-          "title": "재무 원장 연결",
+          "title": "재무·비용 원장 확인",
           "status": "UNAVAILABLE",
           "facts": [
-            "스토어 정산과 Google Sheet 원장은 아직 snapshot에 연결되지 않았습니다."
+            "스토어 정산과 Google Sheet 비용 원장은 아직 snapshot에 연결되지 않았습니다."
           ],
           "interpretations": [
-            "현재는 현금·수익·미수금을 회사 상태로 해석할 수 없습니다."
+            "현재는 현금·비용·정산액을 회사 상태로 해석할 수 없습니다."
           ],
           "recommendations": [
-            "SFX 회사 운영 시스템의 재무 거래 원장과 현금 원장을 연결하세요."
+            "/admin/finance에서 Google Sheets 재무 거래·현금·구독료 탭 연결을 확인하세요."
           ],
           "evidence_refs": [],
           "freshness": "UNKNOWN",
           "confidence": "LOW",
           "business_impact": "가격·지출·런웨이 판단",
-          "human_action": "재무 원장을 연결하기 전에는 금전 결정을 보류하세요.",
+          "human_action": "/admin/finance에서 원천 연결과 데이터 시점을 확인하기 전에는 금전 결정을 보류하세요.",
           "decision_required": true,
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     },
     {
       "department_id": "marketing",
@@ -354,7 +354,7 @@
           "decision_status": "NOT_REQUIRED"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     },
     {
       "department_id": "data",
@@ -543,7 +543,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     },
     {
       "department_id": "distribution",
@@ -837,7 +837,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     },
     {
       "department_id": "engineering",
@@ -926,7 +926,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-11T05:04:13+00:00"
+      "refreshed_at": "2026-07-11T09:24:14+00:00"
     }
   ],
   "connector_health": [
@@ -1048,22 +1048,22 @@
     },
     {
       "result_id": "finance-ledger-coverage",
-      "title": "재무 원장 연결",
+      "title": "재무·비용 원장 확인",
       "status": "UNAVAILABLE",
       "facts": [
-        "스토어 정산과 Google Sheet 원장은 아직 snapshot에 연결되지 않았습니다."
+        "스토어 정산과 Google Sheet 비용 원장은 아직 snapshot에 연결되지 않았습니다."
       ],
       "interpretations": [
-        "현재는 현금·수익·미수금을 회사 상태로 해석할 수 없습니다."
+        "현재는 현금·비용·정산액을 회사 상태로 해석할 수 없습니다."
       ],
       "recommendations": [
-        "SFX 회사 운영 시스템의 재무 거래 원장과 현금 원장을 연결하세요."
+        "/admin/finance에서 Google Sheets 재무 거래·현금·구독료 탭 연결을 확인하세요."
       ],
       "evidence_refs": [],
       "freshness": "UNKNOWN",
       "confidence": "LOW",
       "business_impact": "가격·지출·런웨이 판단",
-      "human_action": "재무 원장을 연결하기 전에는 금전 결정을 보류하세요.",
+      "human_action": "/admin/finance에서 원천 연결과 데이터 시점을 확인하기 전에는 금전 결정을 보류하세요.",
       "decision_required": true,
       "decision_status": "PENDING"
     },
@@ -1272,5 +1272,5 @@
       "decision_status": "PENDING"
     }
   ],
-  "generated_at": "2026-07-11T05:04:13+00:00"
+  "generated_at": "2026-07-11T09:24:14+00:00"
 }

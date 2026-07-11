@@ -1,0 +1,30 @@
+{
+  "mode": "fixture",
+  "asOf": "",
+  "periodStart": "",
+  "periodEnd": "",
+  "timezone": "Asia/Seoul",
+  "summary": {
+    "expenseTotal": null,
+    "expenseCurrency": null,
+    "expenseTotals": [],
+    "postedExpenseCount": 0,
+    "pendingApprovalCount": 0,
+    "activeCommitmentCount": 0,
+    "upcomingRenewalCount": 0,
+    "reconciliationIssueCount": 0,
+    "cashAvailable": null,
+    "cashCurrency": null
+  },
+  "transactions": [],
+  "commitments": [],
+  "expenseRequests": [],
+  "cashSnapshots": [],
+  "reconciliations": [],
+  "sources": [],
+  "recentDecisions": [],
+  "notes": [
+    "정적 미리보기입니다. 실제 비용 데이터는 운영 서버와 Google Sheets 연결 후 표시됩니다.",
+    "데이터가 없다는 것은 0원이 아닙니다."
+  ]
+}

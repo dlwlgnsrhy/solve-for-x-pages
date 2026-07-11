@@ -3,4 +3,4 @@
 :HL["/screenshots/imjong/01_home.png","image"]
 :HL["/screenshots/imjong/02_will.png","image"]
 :HL["/screenshots/imjong/03_guide.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"imjong","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"E0rsgcF-VKguCHE1F_1PW"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"imjong","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"dQj7j6BLyaJjfSsnFfYlr"}
