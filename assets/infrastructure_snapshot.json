@@ -1,0 +1,236 @@
+{
+  "mode": "static",
+  "generatedAt": "2026-07-10T14:00:08Z",
+  "project": {
+    "projectId": "solve-for-x-core",
+    "authDomain": "solve-for-x-core.firebaseapp.com",
+    "appId": "1:36989619898:web:16c030f80b205d022c7c83",
+    "storageBucket": "solve-for-x-core.firebasestorage.app"
+  },
+  "components": [
+    {
+      "component": "Firebase Console",
+      "status": "BROWSER_VERIFIED",
+      "sourceKind": "fixture",
+      "observedAt": "2026-07-10T14:00:08Z",
+      "freshness": "RECENT",
+      "confidence": "HIGH",
+      "facts": [
+        "Firebase Console에 브라우저로 접근했고 solve-for-x-core 프로젝트, 웹 앱, Authentication·SQL Connect 메뉴를 확인했습니다."
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "firebase",
+          "label": "Firebase solve-for-x-core 프로젝트",
+          "url": "https://console.firebase.google.com/project/solve-for-x-core/overview"
+        }
+      ],
+      "businessImpact": "Firebase 프로젝트·관리자 기능의 운영 상태",
+      "nextAction": "Crashlytics·권한·사용량은 해당 제품 화면에서 별도 검증하세요.",
+      "requiresApproval": false,
+      "errorCode": null,
+      "metadata": {
+        "projectId": "solve-for-x-core",
+        "authDomain": "solve-for-x-core.firebaseapp.com",
+        "appId": "1:36989619898:web:16c030f80b205d022c7c83",
+        "storageBucket": "solve-for-x-core.firebasestorage.app"
+      }
+    },
+    {
+      "component": "Firebase Auth",
+      "status": "CONFIGURED",
+      "sourceKind": "fixture",
+      "observedAt": null,
+      "freshness": "UNKNOWN",
+      "confidence": "MEDIUM",
+      "facts": [
+        "Firebase Auth 클라이언트와 관리자 검증 경로가 설정되어 있습니다. 정적 Pages에서는 서버 ID Token 검증을 실행하지 않습니다."
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "firebase-auth",
+          "label": "Firebase Authentication",
+          "url": "https://console.firebase.google.com/project/solve-for-x-core/authentication/providers"
+        }
+      ],
+      "businessImpact": "관제 화면과 관리자 API의 접근 통제",
+      "nextAction": "SSR 운영 서버에서 회사 Firebase ID Token smoke를 실행하세요.",
+      "requiresApproval": false,
+      "errorCode": null,
+      "metadata": {
+        "projectId": "solve-for-x-core",
+        "authDomain": "solve-for-x-core.firebaseapp.com",
+        "appId": "1:36989619898:web:16c030f80b205d022c7c83",
+        "storageBucket": "solve-for-x-core.firebasestorage.app",
+        "authenticationMethod": "not_verified"
+      }
+    },
+    {
+      "component": "Firebase Web App",
+      "status": "CONFIGURED",
+      "sourceKind": "fixture",
+      "observedAt": null,
+      "freshness": "UNKNOWN",
+      "confidence": "MEDIUM",
+      "facts": [
+        "웹 앱 환경변수와 solve-for-x-core 프로젝트 연결 설정을 확인했습니다."
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "firebase",
+          "label": "Firebase solve-for-x-core 프로젝트",
+          "url": "https://console.firebase.google.com/project/solve-for-x-core/overview"
+        }
+      ],
+      "businessImpact": "브라우저 로그인과 관리자 화면 초기화",
+      "nextAction": "브라우저 인증 smoke를 실행하세요.",
+      "requiresApproval": false,
+      "errorCode": null,
+      "metadata": {
+        "projectId": "solve-for-x-core",
+        "authDomain": "solve-for-x-core.firebaseapp.com",
+        "appId": "1:36989619898:web:16c030f80b205d022c7c83",
+        "storageBucket": "solve-for-x-core.firebasestorage.app"
+      }
+    },
+    {
+      "component": "Firebase Data Connect",
+      "status": "CONFIGURED",
+      "sourceKind": "fixture",
+      "observedAt": null,
+      "freshness": "UNKNOWN",
+      "confidence": "MEDIUM",
+      "facts": [
+        "Data Connect 설정과 Firebase Auth UID를 매핑하는 User 테이블을 확인했습니다."
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "dataconnect",
+          "label": "Firebase Data Connect 설정",
+          "path": "db/dataconnect/dataconnect.yaml"
+        },
+        {
+          "kind": "firebase",
+          "label": "Firebase solve-for-x-core 프로젝트",
+          "url": "https://console.firebase.google.com/project/solve-for-x-core/overview"
+        }
+      ],
+      "businessImpact": "Firebase와 Cloud SQL 사이의 typed read model 신뢰도",
+      "nextAction": "SSR 운영 서버에서 Data Connect read smoke를 실행하세요.",
+      "requiresApproval": false,
+      "errorCode": null,
+      "metadata": {
+        "serviceId": "solve-for-x-data",
+        "location": "us-central1",
+        "cloudSqlInstance": "\"solve-for-x-pg\"",
+        "databaseName": "\"solveforx\"",
+        "userTableMapped": true
+      }
+    },
+    {
+      "component": "Cloud SQL / PostgreSQL",
+      "status": "UNAVAILABLE",
+      "sourceKind": "fixture",
+      "observedAt": null,
+      "freshness": "UNKNOWN",
+      "confidence": "LOW",
+      "facts": [
+        "정적 Pages에서는 Cloud SQL 연결을 실행하지 않습니다."
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "database",
+          "label": "회사 운영 DB 읽기 검증",
+          "path": "sfx_core"
+        }
+      ],
+      "businessImpact": "브라우저 동기화·결정·피드백의 중앙 저장 신뢰도",
+      "nextAction": "SSR 운영 서버에서 PostgreSQL read smoke를 실행하세요.",
+      "requiresApproval": false,
+      "errorCode": "STATIC_PREVIEW_NO_DATABASE",
+      "metadata": {
+        "databaseName": "\"solveforx\"",
+        "schema": "sfx_core",
+        "cloudSqlInstance": "\"solve-for-x-pg\"",
+        "requiredTables": [],
+        "presentTables": [],
+        "missingTables": []
+      }
+    },
+    {
+      "component": "회사 운영 PostgreSQL 원장",
+      "status": "UNAVAILABLE",
+      "sourceKind": "fixture",
+      "observedAt": null,
+      "freshness": "UNKNOWN",
+      "confidence": "LOW",
+      "facts": [
+        "정적 Pages에서는 Cloud SQL 연결을 실행하지 않습니다."
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "database",
+          "label": "회사 운영 DB 읽기 검증",
+          "path": "sfx_core"
+        }
+      ],
+      "businessImpact": "브라우저 동기화·결정·피드백의 중앙 저장 신뢰도",
+      "nextAction": "SSR 운영 서버에서 PostgreSQL read smoke를 실행하세요.",
+      "requiresApproval": false,
+      "errorCode": "STATIC_PREVIEW_NO_DATABASE",
+      "metadata": {
+        "databaseName": "\"solveforx\"",
+        "schema": "sfx_core",
+        "cloudSqlInstance": "\"solve-for-x-pg\"",
+        "requiredTables": [],
+        "presentTables": [],
+        "missingTables": []
+      }
+    }
+  ],
+  "overallStatus": "MANUAL_REQUIRED",
+  "lastVerifiedAt": "2026-07-10T14:00:08Z",
+  "nextActions": [
+    "SSR 운영 서버에서 회사 Firebase ID Token smoke를 실행하세요.",
+    "브라우저 인증 smoke를 실행하세요.",
+    "SSR 운영 서버에서 Data Connect read smoke를 실행하세요.",
+    "SSR 운영 서버에서 PostgreSQL read smoke를 실행하세요."
+  ],
+  "evidenceRefs": [
+    {
+      "kind": "firebase",
+      "label": "Firebase solve-for-x-core 프로젝트",
+      "url": "https://console.firebase.google.com/project/solve-for-x-core/overview"
+    },
+    {
+      "kind": "firebase-auth",
+      "label": "Firebase Authentication",
+      "url": "https://console.firebase.google.com/project/solve-for-x-core/authentication/providers"
+    },
+    {
+      "kind": "firebase",
+      "label": "Firebase solve-for-x-core 프로젝트",
+      "url": "https://console.firebase.google.com/project/solve-for-x-core/overview"
+    },
+    {
+      "kind": "dataconnect",
+      "label": "Firebase Data Connect 설정",
+      "path": "db/dataconnect/dataconnect.yaml"
+    },
+    {
+      "kind": "firebase",
+      "label": "Firebase solve-for-x-core 프로젝트",
+      "url": "https://console.firebase.google.com/project/solve-for-x-core/overview"
+    },
+    {
+      "kind": "database",
+      "label": "회사 운영 DB 읽기 검증",
+      "path": "sfx_core"
+    },
+    {
+      "kind": "database",
+      "label": "회사 운영 DB 읽기 검증",
+      "path": "sfx_core"
+    }
+  ]
+}
