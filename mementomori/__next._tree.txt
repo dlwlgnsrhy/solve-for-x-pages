@@ -3,4 +3,4 @@
 :HL["/screenshots/mementomori/01_grid.png","image"]
 :HL["/screenshots/mementomori/02_countdown.png","image"]
 :HL["/screenshots/mementomori/03_share.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"mementomori","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Jt9ACyxYucPBdu4ILbBSo"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"mementomori","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"fiK1aqPzOBFxddvU0ZMHW"}
