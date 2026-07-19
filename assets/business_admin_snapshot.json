@@ -91,6 +91,26 @@
     {
       "name": "Decision_Log",
       "purpose": "사람의 승인·해지·갱신 결정과 근거"
+    },
+    {
+      "name": "Finance_Transactions",
+      "purpose": "비용·수익·환불·정산의 원천 거래 색인"
+    },
+    {
+      "name": "Finance_Cash",
+      "purpose": "실제 확인된 계정별 현금 스냅샷"
+    },
+    {
+      "name": "Agent_Capabilities",
+      "purpose": "에이전트별 허용 계정·scope·host·HTTP method·쓰기 정책"
+    },
+    {
+      "name": "Agent_Run_Log",
+      "purpose": "읽기 실행 ID·목적·상태·근거·오류·다음 행동"
+    },
+    {
+      "name": "Manual_Task_Queue",
+      "purpose": "로그인·MFA·권한·계약 등 대표 직접 처리 작업"
     }
   ],
   "rules": [

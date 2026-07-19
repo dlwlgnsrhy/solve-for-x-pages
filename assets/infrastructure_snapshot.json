@@ -1,6 +1,6 @@
 {
   "mode": "static",
-  "generatedAt": "2026-07-10T14:00:08Z",
+  "generatedAt": "2026-07-14T10:34:47Z",
   "project": {
     "projectId": "solve-for-x-core",
     "authDomain": "solve-for-x-core.firebaseapp.com",
@@ -12,11 +12,11 @@
       "component": "Firebase Console",
       "status": "BROWSER_VERIFIED",
       "sourceKind": "fixture",
-      "observedAt": "2026-07-10T14:00:08Z",
+      "observedAt": "2026-07-14T10:34:47Z",
       "freshness": "RECENT",
       "confidence": "HIGH",
       "facts": [
-        "Firebase Console에 브라우저로 접근했고 solve-for-x-core 프로젝트, 웹 앱, Authentication·SQL Connect 메뉴를 확인했습니다."
+        "회사 계정으로 solve-for-x-core, Google 로그인 Auth, 웹 앱과 Hosting 사이트, SQL Connect 서비스 solve-for-x-data 및 Cloud SQL solve-for-x-pg/solveforx를 확인했습니다. App Hosting은 Spark에서 사용할 수 없고 SQL Connect 무료 체험은 2026-09-16 종료 예정입니다."
       ],
       "evidenceRefs": [
         {
@@ -26,7 +26,7 @@
         }
       ],
       "businessImpact": "Firebase 프로젝트·관리자 기능의 운영 상태",
-      "nextAction": "Crashlytics·권한·사용량은 해당 제품 화면에서 별도 검증하세요.",
+      "nextAction": "유료 전환 전 비용을 결정하고, 사용자 지원 이메일이 개인 Gmail로 남은 설정을 회사 이메일로 변경할지 승인하세요.",
       "requiresApproval": false,
       "errorCode": null,
       "metadata": {
@@ -189,7 +189,7 @@
     }
   ],
   "overallStatus": "MANUAL_REQUIRED",
-  "lastVerifiedAt": "2026-07-10T14:00:08Z",
+  "lastVerifiedAt": "2026-07-14T10:34:47Z",
   "nextActions": [
     "SSR 운영 서버에서 회사 Firebase ID Token smoke를 실행하세요.",
     "브라우저 인증 smoke를 실행하세요.",

@@ -1,6 +1,6 @@
 {
-  "snapshot_id": "company-20260717T021350Z",
-  "as_of": "2026-07-17T02:13:50+00:00",
+  "snapshot_id": "company-20260719T053014Z",
+  "as_of": "2026-07-19T05:30:14+00:00",
   "period": "daily",
   "north_star": {
     "id": "delivery_lead_time",
@@ -188,7 +188,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     },
     {
       "department_id": "sales",
@@ -248,7 +248,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     },
     {
       "department_id": "finance",
@@ -308,7 +308,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     },
     {
       "department_id": "marketing",
@@ -354,7 +354,7 @@
           "decision_status": "NOT_REQUIRED"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     },
     {
       "department_id": "data",
@@ -418,8 +418,8 @@
       ],
       "work_cards": [],
       "blockers": [
-        "Umami 읽기 API 연결이 아직 없습니다.",
-        "Apple 계약·Business·DSA 외부 계정 게이트가 남아 있습니다."
+        "analytics.solve-for-x.net이 DNS_PROBE_FINISHED_NXDOMAIN으로 확인되어 로그인이나 읽기 API 이전에 서비스 주소 자체가 연결되지 않았습니다.",
+        "App Store Connect가 Apple 계정 로그인 화면으로 돌아가 앱·TestFlight·계약 상태를 읽지 못했습니다."
       ],
       "evidence_refs": [
         {
@@ -483,13 +483,13 @@
             "연결되지 않은 시스템은 관련 KPI를 확정할 수 없습니다."
           ],
           "recommendations": [
-            "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 제한 폴더 공유 권한을 다시 확인하세요.",
-            "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 Registry 행을 다시 확인하고 실제 항목을 입력하세요.",
+            "제한 폴더의 민감 문서 원문은 복제하지 말고 공유 범위와 메타데이터만 별도 검증하세요.",
+            "GitHub OIDC·WIF 서비스 계정에 Vault와 Registry read 권한을 부여하고 connector 확인과 별도로 서버 read smoke를 실행하세요.",
             "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-            "Umami URL과 웹사이트 ID를 등록하세요.",
-            "프로덕션 공개·테스트 트랙 변경은 대표 승인 후 진행하세요.",
-            "대표가 App Store Connect 계약과 Business/DSA 정보를 처리하세요.",
-            "Crashlytics·권한·사용량은 해당 제품 화면에서 별도 검증하세요."
+            "Umami 운영 위치를 결정한 뒤 analytics DNS 레코드, website ID, 읽기 자격을 순서대로 연결하세요.",
+            "Play Console 소유자 계정에서 회사 계정 역할을 검토하세요. 권한 변경과 프로덕션 공개는 대표 확인 후 진행하세요.",
+            "대표가 Apple 계정 로그인과 MFA를 완료한 뒤 앱·TestFlight·Business·DSA를 다시 확인하세요.",
+            "유료 전환 전 비용을 결정하고, 사용자 지원 이메일이 개인 Gmail로 남은 설정을 회사 이메일로 변경할지 승인하세요."
           ],
           "evidence_refs": [
             {
@@ -543,7 +543,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     },
     {
       "department_id": "distribution",
@@ -611,8 +611,8 @@
           "department": "distribution",
           "priority": "MEDIUM",
           "title": "Umami 연결 상태 해결",
-          "reason": "Umami 읽기 API 연결이 아직 없습니다.",
-          "next_action": "Umami URL과 웹사이트 ID를 등록하세요.",
+          "reason": "analytics.solve-for-x.net이 DNS_PROBE_FINISHED_NXDOMAIN으로 확인되어 로그인이나 읽기 API 이전에 서비스 주소 자체가 연결되지 않았습니다.",
+          "next_action": "Umami 운영 위치를 결정한 뒤 analytics DNS 레코드, website ID, 읽기 자격을 순서대로 연결하세요.",
           "status": "OPEN",
           "requires_approval": false,
           "due_at": null,
@@ -666,8 +666,8 @@
           "department": "distribution",
           "priority": "HIGH",
           "title": "App Store Connect 연결 상태 해결",
-          "reason": "Apple 계약·Business·DSA 외부 계정 게이트가 남아 있습니다.",
-          "next_action": "대표가 App Store Connect 계약과 Business/DSA 정보를 처리하세요.",
+          "reason": "App Store Connect가 Apple 계정 로그인 화면으로 돌아가 앱·TestFlight·계약 상태를 읽지 못했습니다.",
+          "next_action": "대표가 Apple 계정 로그인과 MFA를 완료한 뒤 앱·TestFlight·Business·DSA를 다시 확인하세요.",
           "status": "OPEN",
           "requires_approval": true,
           "due_at": null,
@@ -718,8 +718,8 @@
         }
       ],
       "blockers": [
-        "Umami 읽기 API 연결이 아직 없습니다.",
-        "Apple 계약·Business·DSA 외부 계정 게이트가 남아 있습니다."
+        "analytics.solve-for-x.net이 DNS_PROBE_FINISHED_NXDOMAIN으로 확인되어 로그인이나 읽기 API 이전에 서비스 주소 자체가 연결되지 않았습니다.",
+        "App Store Connect가 Apple 계정 로그인 화면으로 돌아가 앱·TestFlight·계약 상태를 읽지 못했습니다."
       ],
       "evidence_refs": [
         {
@@ -772,18 +772,18 @@
           "status": "BLOCKED_EXTERNAL",
           "facts": [
             "GA4: BROWSER_VERIFIED — GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 보고서 API 연결은 별도입니다.",
-            "Umami: UNAVAILABLE — Umami 읽기 API 연결이 아직 없습니다.",
-            "Google Play: BROWSER_VERIFIED — Google Play Console에 브라우저로 접근했습니다. Solve for X 앱은 초안·내부 테스트 상태이며 1.0.0+1(버전 코드 1) App Bundle이 활성입니다.",
-            "App Store Connect: BLOCKED_EXTERNAL — Apple 계약·Business·DSA 외부 계정 게이트가 남아 있습니다."
+            "Umami: UNAVAILABLE — analytics.solve-for-x.net이 DNS_PROBE_FINISHED_NXDOMAIN으로 확인되어 로그인이나 읽기 API 이전에 서비스 주소 자체가 연결되지 않았습니다.",
+            "Google Play: BROWSER_VERIFIED — 회사 계정 soluni@solve-for-x.net으로 개발자 계정 soluni와 4개 앱 목록을 확인했습니다. Solve for X는 초안·내부 테스트 상태이고 회사 계정에는 사용자·권한 관리 권한이 없습니다.",
+            "App Store Connect: BLOCKED_EXTERNAL — App Store Connect가 Apple 계정 로그인 화면으로 돌아가 앱·TestFlight·계약 상태를 읽지 못했습니다."
           ],
           "interpretations": [
             "스토어 계정·계약 문제는 엔지니어링 결함과 분리해서 처리해야 합니다."
           ],
           "recommendations": [
             "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-            "Umami URL과 웹사이트 ID를 등록하세요.",
-            "프로덕션 공개·테스트 트랙 변경은 대표 승인 후 진행하세요.",
-            "대표가 App Store Connect 계약과 Business/DSA 정보를 처리하세요."
+            "Umami 운영 위치를 결정한 뒤 analytics DNS 레코드, website ID, 읽기 자격을 순서대로 연결하세요.",
+            "Play Console 소유자 계정에서 회사 계정 역할을 검토하세요. 권한 변경과 프로덕션 공개는 대표 확인 후 진행하세요.",
+            "대표가 Apple 계정 로그인과 MFA를 완료한 뒤 앱·TestFlight·Business·DSA를 다시 확인하세요."
           ],
           "evidence_refs": [
             {
@@ -837,7 +837,7 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     },
     {
       "department_id": "engineering",
@@ -926,30 +926,30 @@
           "decision_status": "PENDING"
         }
       ],
-      "refreshed_at": "2026-07-17T02:13:50+00:00"
+      "refreshed_at": "2026-07-19T05:30:14+00:00"
     }
   ],
   "connector_health": [
     {
       "provider": "Google Drive",
       "status": "READ_VERIFIED",
-      "last_success_at": "2026-07-10T14:00:08Z",
+      "last_success_at": "2026-07-14T10:34:47Z",
       "error_code": null,
-      "message": "연결된 Drive 읽기에서 Vault와 10개 관리 폴더를 읽었습니다. 현재 Chrome 로그인 계정에서는 같은 폴더 접근 권한이 확인되지 않았고, 실제 원문 문서 수와 제한 폴더 권한은 별도 확인이 필요합니다.",
-      "next_action": "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 제한 폴더 공유 권한을 다시 확인하세요."
+      "message": "회사 계정 soluni@solve-for-x.net으로 Vault와 10개 관리 폴더 접근 및 소유 상태를 확인했습니다. 개인 Gmail은 편집자로 남아 있으며 실제 원문 문서 수와 제한 폴더의 보안 설정은 별도 확인이 필요합니다.",
+      "next_action": "제한 폴더의 민감 문서 원문은 복제하지 말고 공유 범위와 메타데이터만 별도 검증하세요."
     },
     {
       "provider": "Google Sheets",
       "status": "READ_VERIFIED",
-      "last_success_at": "2026-07-10T14:00:08Z",
+      "last_success_at": "2026-07-14T10:34:47Z",
       "error_code": null,
-      "message": "연결된 Sheets 읽기에서 6개 Registry 탭과 헤더를 읽었습니다. 현재 Chrome 로그인 계정에서는 같은 Sheet 접근 권한이 확인되지 않았고 실제 등록 행은 확인되지 않았습니다.",
-      "next_action": "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 Registry 행을 다시 확인하고 실제 항목을 입력하세요."
+      "message": "Google Drive connector로 Registry Sheet 11개 탭을 다시 읽었습니다. 기존 Finance_Transactions와 Finance_Cash는 보존했고, Account_Registry 10개 alias 및 Agent_Capabilities·Agent_Run_Log·Manual_Task_Queue를 비민감 메타데이터로 추가했습니다.",
+      "next_action": "GitHub OIDC·WIF 서비스 계정에 Vault와 Registry read 권한을 부여하고 connector 확인과 별도로 서버 read smoke를 실행하세요."
     },
     {
       "provider": "GA4",
       "status": "BROWSER_VERIFIED",
-      "last_success_at": "2026-07-10T14:00:08Z",
+      "last_success_at": "2026-07-14T10:34:47Z",
       "error_code": null,
       "message": "GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 보고서 API 연결은 별도입니다.",
       "next_action": "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요."
@@ -959,32 +959,32 @@
       "status": "UNAVAILABLE",
       "last_success_at": null,
       "error_code": "UMAMI_REPORT_NOT_CONNECTED",
-      "message": "Umami 읽기 API 연결이 아직 없습니다.",
-      "next_action": "Umami URL과 웹사이트 ID를 등록하세요."
+      "message": "analytics.solve-for-x.net이 DNS_PROBE_FINISHED_NXDOMAIN으로 확인되어 로그인이나 읽기 API 이전에 서비스 주소 자체가 연결되지 않았습니다.",
+      "next_action": "Umami 운영 위치를 결정한 뒤 analytics DNS 레코드, website ID, 읽기 자격을 순서대로 연결하세요."
     },
     {
       "provider": "Google Play",
       "status": "BROWSER_VERIFIED",
-      "last_success_at": "2026-07-10T14:00:08Z",
+      "last_success_at": "2026-07-14T10:34:47Z",
       "error_code": null,
-      "message": "Google Play Console에 브라우저로 접근했습니다. Solve for X 앱은 초안·내부 테스트 상태이며 1.0.0+1(버전 코드 1) App Bundle이 활성입니다.",
-      "next_action": "프로덕션 공개·테스트 트랙 변경은 대표 승인 후 진행하세요."
+      "message": "회사 계정 soluni@solve-for-x.net으로 개발자 계정 soluni와 4개 앱 목록을 확인했습니다. Solve for X는 초안·내부 테스트 상태이고 회사 계정에는 사용자·권한 관리 권한이 없습니다.",
+      "next_action": "Play Console 소유자 계정에서 회사 계정 역할을 검토하세요. 권한 변경과 프로덕션 공개는 대표 확인 후 진행하세요."
     },
     {
       "provider": "App Store Connect",
       "status": "BLOCKED_EXTERNAL",
       "last_success_at": null,
       "error_code": "EXTERNAL_AGREEMENT_REQUIRED",
-      "message": "Apple 계약·Business·DSA 외부 계정 게이트가 남아 있습니다.",
-      "next_action": "대표가 App Store Connect 계약과 Business/DSA 정보를 처리하세요."
+      "message": "App Store Connect가 Apple 계정 로그인 화면으로 돌아가 앱·TestFlight·계약 상태를 읽지 못했습니다.",
+      "next_action": "대표가 Apple 계정 로그인과 MFA를 완료한 뒤 앱·TestFlight·Business·DSA를 다시 확인하세요."
     },
     {
       "provider": "Firebase",
       "status": "BROWSER_VERIFIED",
-      "last_success_at": "2026-07-10T14:00:08Z",
+      "last_success_at": "2026-07-14T10:34:47Z",
       "error_code": null,
-      "message": "Firebase Console에 브라우저로 접근했고 solve-for-x-core 프로젝트, 웹 앱, Authentication·SQL Connect 메뉴를 확인했습니다.",
-      "next_action": "Crashlytics·권한·사용량은 해당 제품 화면에서 별도 검증하세요."
+      "message": "회사 계정으로 solve-for-x-core, Google 로그인 Auth, 웹 앱과 Hosting 사이트, SQL Connect 서비스 solve-for-x-data 및 Cloud SQL solve-for-x-pg/solveforx를 확인했습니다. App Hosting은 Spark에서 사용할 수 없고 SQL Connect 무료 체험은 2026-09-16 종료 예정입니다.",
+      "next_action": "유료 전환 전 비용을 결정하고, 사용자 지원 이메일이 개인 Gmail로 남은 설정을 회사 이메일로 변경할지 승인하세요."
     }
   ],
   "results": [
@@ -1106,13 +1106,13 @@
         "연결되지 않은 시스템은 관련 KPI를 확정할 수 없습니다."
       ],
       "recommendations": [
-        "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 제한 폴더 공유 권한을 다시 확인하세요.",
-        "Chrome을 회사 Google 계정(soluni@solve-for-x.net)으로 전환한 뒤 Registry 행을 다시 확인하고 실제 항목을 입력하세요.",
+        "제한 폴더의 민감 문서 원문은 복제하지 말고 공유 범위와 메타데이터만 별도 검증하세요.",
+        "GitHub OIDC·WIF 서비스 계정에 Vault와 Registry read 권한을 부여하고 connector 확인과 별도로 서버 read smoke를 실행하세요.",
         "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-        "Umami URL과 웹사이트 ID를 등록하세요.",
-        "프로덕션 공개·테스트 트랙 변경은 대표 승인 후 진행하세요.",
-        "대표가 App Store Connect 계약과 Business/DSA 정보를 처리하세요.",
-        "Crashlytics·권한·사용량은 해당 제품 화면에서 별도 검증하세요."
+        "Umami 운영 위치를 결정한 뒤 analytics DNS 레코드, website ID, 읽기 자격을 순서대로 연결하세요.",
+        "Play Console 소유자 계정에서 회사 계정 역할을 검토하세요. 권한 변경과 프로덕션 공개는 대표 확인 후 진행하세요.",
+        "대표가 Apple 계정 로그인과 MFA를 완료한 뒤 앱·TestFlight·Business·DSA를 다시 확인하세요.",
+        "유료 전환 전 비용을 결정하고, 사용자 지원 이메일이 개인 Gmail로 남은 설정을 회사 이메일로 변경할지 승인하세요."
       ],
       "evidence_refs": [
         {
@@ -1171,18 +1171,18 @@
       "status": "BLOCKED_EXTERNAL",
       "facts": [
         "GA4: BROWSER_VERIFIED — GA4 Property에 브라우저로 접근했고 최근 7일 활성 사용자 4명, 이벤트 29건, 주요 이벤트 0건을 확인했습니다. 서버 보고서 API 연결은 별도입니다.",
-        "Umami: UNAVAILABLE — Umami 읽기 API 연결이 아직 없습니다.",
-        "Google Play: BROWSER_VERIFIED — Google Play Console에 브라우저로 접근했습니다. Solve for X 앱은 초안·내부 테스트 상태이며 1.0.0+1(버전 코드 1) App Bundle이 활성입니다.",
-        "App Store Connect: BLOCKED_EXTERNAL — Apple 계약·Business·DSA 외부 계정 게이트가 남아 있습니다."
+        "Umami: UNAVAILABLE — analytics.solve-for-x.net이 DNS_PROBE_FINISHED_NXDOMAIN으로 확인되어 로그인이나 읽기 API 이전에 서비스 주소 자체가 연결되지 않았습니다.",
+        "Google Play: BROWSER_VERIFIED — 회사 계정 soluni@solve-for-x.net으로 개발자 계정 soluni와 4개 앱 목록을 확인했습니다. Solve for X는 초안·내부 테스트 상태이고 회사 계정에는 사용자·권한 관리 권한이 없습니다.",
+        "App Store Connect: BLOCKED_EXTERNAL — App Store Connect가 Apple 계정 로그인 화면으로 돌아가 앱·TestFlight·계약 상태를 읽지 못했습니다."
       ],
       "interpretations": [
         "스토어 계정·계약 문제는 엔지니어링 결함과 분리해서 처리해야 합니다."
       ],
       "recommendations": [
         "GA4 서버 보고서 읽기 권한을 연결해 브라우저 확인과 서버 리포트를 일치시키세요.",
-        "Umami URL과 웹사이트 ID를 등록하세요.",
-        "프로덕션 공개·테스트 트랙 변경은 대표 승인 후 진행하세요.",
-        "대표가 App Store Connect 계약과 Business/DSA 정보를 처리하세요."
+        "Umami 운영 위치를 결정한 뒤 analytics DNS 레코드, website ID, 읽기 자격을 순서대로 연결하세요.",
+        "Play Console 소유자 계정에서 회사 계정 역할을 검토하세요. 권한 변경과 프로덕션 공개는 대표 확인 후 진행하세요.",
+        "대표가 Apple 계정 로그인과 MFA를 완료한 뒤 앱·TestFlight·Business·DSA를 다시 확인하세요."
       ],
       "evidence_refs": [
         {
@@ -1272,5 +1272,5 @@
       "decision_status": "PENDING"
     }
   ],
-  "generated_at": "2026-07-17T02:13:50+00:00"
+  "generated_at": "2026-07-19T05:30:14+00:00"
 }
