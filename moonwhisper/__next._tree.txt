@@ -3,4 +3,4 @@
 :HL["/screenshots/moonwhisper/01_home.png","image"]
 :HL["/screenshots/moonwhisper/02_voice.png","image"]
 :HL["/screenshots/moonwhisper/03_history.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"moonwhisper","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"ZS1r58vP0Yl3lKJ9nsCVy"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"moonwhisper","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"kBV_4K_dJ43nbTIU6YnsZ"}
