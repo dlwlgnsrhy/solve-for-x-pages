@@ -1,6 +1,6 @@
-:HL["/_next/static/chunks/3_3ovdowqu11-.css","style"]
+:HL["/_next/static/chunks/2nva3xhiahxm2.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/screenshots/mementomori/01_grid.png","image"]
-:HL["/screenshots/mementomori/02_countdown.png","image"]
-:HL["/screenshots/mementomori/03_share.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"mementomori","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"fvlsWL267kOVTI2UiMJ5T"}
+:HL["/cases/memento-mori/01-app-icon.png","image"]
+:HL["/cases/memento-mori/02-splash-logo.png","image"]
+:HL["/cases/memento-mori/03-launch.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"mementomori","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"OFvS43bwyYbkhC4HTPY4P"}
