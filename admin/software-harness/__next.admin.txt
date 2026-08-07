@@ -1,3 +1,3 @@
 1:"$Sreact.fragment"
-0:{"rsc":["$","$1","c",{"children":[null,"$L2"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"10UEqeq0SIkqNsTSv2mAL"}
+0:{"rsc":["$","$1","c",{"children":[null,"$L2"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"rT82UDiDSurtl2GAKRmwh"}
 2:E{"digest":"NEXT_HTTP_ERROR_FALLBACK;404"}
