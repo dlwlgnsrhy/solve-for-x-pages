@@ -2,7 +2,6 @@ User-Agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api
-Disallow: /app
 Disallow: /dashboard
 Disallow: /factory
 
