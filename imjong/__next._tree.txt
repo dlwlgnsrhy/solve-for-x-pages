@@ -3,4 +3,4 @@
 :HL["/cases/imjong-care/01-app-icon.png","image"]
 :HL["/cases/imjong-care/02-splash.png","image"]
 :HL["/cases/imjong-care/03-launch.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"imjong","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"dAXm0KFs9xbZ3J3EewG5A"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"imjong","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"I9d-7x5poRxKwjlQ0Kk7-"}
