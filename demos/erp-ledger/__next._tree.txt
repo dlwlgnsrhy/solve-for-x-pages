@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0iz5h5fv9yzch.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/chunks/34x19oiz9r3gi.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"demos","param":null,"prefetchHints":0,"slots":{"children":{"name":"erp-ledger","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"_1WWREexj0vIOFDOIUOWu"}

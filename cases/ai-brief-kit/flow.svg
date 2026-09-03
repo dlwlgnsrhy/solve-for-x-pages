@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">AI Brief Kit 처리 흐름</title>
+  <desc id="desc">위시켓 프로젝트 제목과 금액이 키워드 분류와 수수료 구간 검사를 거쳐 접근법 3항목과 1페이지 제안 마크다운, NO-BID 경고를 만드는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#f5f3ff"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">AI Brief Kit (LLM 無)</text>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="225" width="550" height="112" rx="28" fill="#ffffff" stroke="#b7a8d8" stroke-width="5"/><text x="600" y="295">위시켓 건 (제목 + 게시액)</text>
+    </g>
+    <g stroke="#7c5cbf" stroke-width="10" fill="none"><path d="M600 337v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="432" width="550" height="112" rx="28" fill="#ede9fe" stroke="#7c5cbf" stroke-width="5"/><text x="600" y="492">키워드 분류 (ERP &gt; 연동 &gt; BI &gt; EC &gt; AI)</text>
+    </g>
+    <g stroke="#7c5cbf" stroke-width="10" fill="none"><path d="M600 544v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="639" width="550" height="112" rx="28" fill="#ede9fe" stroke="#7c5cbf" stroke-width="5"/><text x="600" y="709">수수료 구간 (10% / 15% / 20%)</text>
+    </g>
+    <g stroke="#7c5cbf" stroke-width="10" fill="none"><path d="M600 751v95H325v88"/><path d="M600 846H875v88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="140" y="931" width="370" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="996">1페이지 제안 마크다운</text><text x="325" y="1041" font-size="25" font-weight="500">분류 · 구간 · 접근법 3항목</text>
+      <rect x="690" y="931" width="370" height="150" rx="34" fill="#fff0d4" stroke="#ba7b16" stroke-width="6"/><text x="875" y="996">NO-BID 경고</text><text x="875" y="1041" font-size="25" font-weight="500">20% 구간(500만 미만)일 때</text>
+    </g>
+    <text x="600" y="1130" font-size="28" fill="#5d4a8a">같은 입력이면 항상 같은 초안 — 결정적 규칙</text>
+  </g>
+</svg>

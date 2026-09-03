@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Cafe24 Sync Kit 처리 흐름</title>
+  <desc id="desc">카페24 주문 10건이 상태 매핑을 거쳐 9건 동기화와 1건 실패 로그로 나뉘고, 재동기화 시 멱등 키로 중복이 걸러지는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#fdf2f8"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">Cafe24 Sync Kit</text>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="225" width="550" height="112" rx="28" fill="#ffffff" stroke="#d8a3b8" stroke-width="5"/><text x="600" y="295">카페24 주문 10건 (원시 상태값)</text>
+    </g>
+    <g stroke="#b04a75" stroke-width="10" fill="none"><path d="M600 337v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="432" width="550" height="112" rx="28" fill="#fce7f3" stroke="#b04a75" stroke-width="5"/><text x="600" y="492">상태 매핑</text><text x="600" y="530" font-size="25" font-weight="500">20 결제 · 21 배송 · 22 완료 · 50 취소</text>
+    </g>
+    <g stroke="#b04a75" stroke-width="10" fill="none"><path d="M600 544v95H325v88"/><path d="M600 639H875v88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="140" y="725" width="370" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="790">9건 동기화</text><text x="325" y="835" font-size="25" font-weight="500">주문번호 멱등 키 적용</text>
+      <rect x="690" y="725" width="370" height="150" rx="34" fill="#fff0d4" stroke="#ba7b16" stroke-width="6"/><text x="875" y="790">1건 실패 로그</text><text x="875" y="835" font-size="25" font-weight="500">상태값 99 (미지정)</text>
+    </g>
+    <g stroke="#b04a75" stroke-width="10" fill="none"><path d="M325 875v155H875v-88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="425" y="931" width="350" height="150" rx="34" fill="#ffffff" stroke="#b04a75" stroke-width="6"/><text x="600" y="996">재동기화 (멱등)</text><text x="600" y="1041" font-size="25" font-weight="500">이미 동기화한 주문은 건너뛰기</text>
+    </g>
+    <text x="600" y="1130" font-size="28" fill="#8a4463">1건 실패가 9건을 막지 않는 주문 동기화</text>
+  </g>
+</svg>

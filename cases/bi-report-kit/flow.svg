@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">BI Report Kit 처리 흐름</title>
+  <desc id="desc">거래 100건이 7일 일별 집계를 거쳐 주 합산 cross-check와 Looker CSV 출력을 만드는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#eff6ff"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">BI Report Kit</text>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="225" width="550" height="112" rx="28" fill="#ffffff" stroke="#93b4d8" stroke-width="5"/><text x="600" y="295">거래 레코드 100건 (2026-08-24~30)</text>
+    </g>
+    <g stroke="#3b6ea5" stroke-width="10" fill="none"><path d="M600 337v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="432" width="550" height="112" rx="28" fill="#dbeafe" stroke="#3b6ea5" stroke-width="5"/><text x="600" y="502">일별 집계 · 7일 (총액 · 건수)</text>
+    </g>
+    <g stroke="#3b6ea5" stroke-width="10" fill="none"><path d="M600 544v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="325" y="639" width="550" height="112" rx="28" fill="#dbeafe" stroke="#3b6ea5" stroke-width="5"/><text x="600" y="709">주 합산 cross-check</text>
+      <text x="600" y="742" font-size="25" font-weight="500">일별 합 = 12,345,678원</text>
+    </g>
+    <g stroke="#3b6ea5" stroke-width="10" fill="none"><path d="M600 751v95H325v88"/><path d="M600 846H875v88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="140" y="931" width="370" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="996">검증된 리포트</text><text x="325" y="1041" font-size="25" font-weight="500">일별 7행 · 주 1행</text>
+      <rect x="690" y="931" width="370" height="150" rx="34" fill="#ffffff" stroke="#3b6ea5" stroke-width="6"/><text x="875" y="996">Looker CSV</text><text x="875" y="1041" font-size="25" font-weight="500">헤더 고정 · 8줄</text>
+    </g>
+    <text x="600" y="1130" font-size="28" fill="#44608a">대시보드 숫자를 추측이 아니라 검증으로</text>
+  </g>
+</svg>

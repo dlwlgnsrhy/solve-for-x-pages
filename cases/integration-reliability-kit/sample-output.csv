@@ -1,0 +1,3 @@
+run_id,source,external_id,account,amount_krw,occurred_at
+sample-run-001,ERP,INV-001,매출,1200000,2026-08-28
+sample-run-001,API,INV-003,지급수수료,15000,2026-08-28

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">ERP Ledger Kit 처리 흐름</title>
+  <desc id="desc">영림원, 아마란스, SAP의 전표가 공통 계약으로 정규화되고 계정 매핑과 차변·대변 균형 검증을 거쳐 정상 장부와 중복 전표 로그로 나뉘는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#ecfdf3"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">ERP Ledger Kit</text>
+    <g font-size="34" font-weight="700">
+      <rect x="60" y="225" width="280" height="112" rx="28" fill="#ffffff" stroke="#7fb89a" stroke-width="5"/><text x="200" y="295">영림원</text>
+      <rect x="460" y="225" width="280" height="112" rx="28" fill="#ffffff" stroke="#7fb89a" stroke-width="5"/><text x="600" y="295">아마란스</text>
+      <rect x="860" y="225" width="280" height="112" rx="28" fill="#ffffff" stroke="#7fb89a" stroke-width="5"/><text x="1000" y="295">SAP</text>
+    </g>
+    <g stroke="#2d9462" stroke-width="10" fill="none"><path d="M200 337v95H480v-95"/><path d="M600 337v95"/><path d="M1000 337v95H720v-95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="425" y="432" width="350" height="112" rx="28" fill="#d9f2e3" stroke="#2d9462" stroke-width="5"/><text x="600" y="502">공통 전표 계약 · 정규화</text>
+    </g>
+    <g stroke="#2d9462" stroke-width="10" fill="none"><path d="M600 544v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="425" y="639" width="350" height="112" rx="28" fill="#d9f2e3" stroke="#2d9462" stroke-width="5"/><text x="600" y="709">계정 매핑 · 균형 검증</text>
+    </g>
+    <g stroke="#2d9462" stroke-width="10" fill="none"><path d="M600 751v95H325v88"/><path d="M600 846H875v88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="140" y="931" width="370" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="996">정상 장부</text><text x="325" y="1041" font-size="25" font-weight="500">차변 = 대변 (균형)</text>
+      <rect x="690" y="931" width="370" height="150" rx="34" fill="#fff0d4" stroke="#ba7b16" stroke-width="6"/><text x="875" y="996">중복 전표 로그</text><text x="875" y="1041" font-size="25" font-weight="500">멱등 필터 · 재처리 대기</text>
+    </g>
+    <text x="600" y="1130" font-size="28" fill="#3d6b54">3개 소스 전표를 검증 가능한 하나의 장부로</text>
+  </g>
+</svg>
