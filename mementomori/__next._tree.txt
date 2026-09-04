@@ -3,4 +3,4 @@
 :HL["/cases/memento-mori/01-app-icon.webp","image"]
 :HL["/cases/memento-mori/02-splash-logo.webp","image"]
 :HL["/cases/memento-mori/03-launch.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"mementomori","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"VfHODqD5NRYha6jWh1jCu"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"mementomori","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"znzq4sEyO5fxvO4w1m0DG"}
