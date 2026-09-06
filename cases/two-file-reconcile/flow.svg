@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Two File Reconcile 처리 흐름</title>
+  <desc id="desc">A/B 두 시스템의 내보내기 행이 공통 키로 조인되어 일치, 값 불일치, A만, B만으로 나뉘고 총액 차이와 순서 무관 체크섬으로 검증되는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#fdf2f8"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">Two File Reconcile</text>
+    <g font-size="34" font-weight="700">
+      <rect x="90" y="225" width="430" height="112" rx="28" fill="#ffffff" stroke="#d8a8b8" stroke-width="5"/><text x="305" y="295">A 시스템 내보내기</text>
+      <rect x="680" y="225" width="430" height="112" rx="28" fill="#ffffff" stroke="#d8a8b8" stroke-width="5"/><text x="895" y="295">B 시스템 내보내기</text>
+    </g>
+    <g stroke="#b34d6f" stroke-width="10" fill="none"><path d="M305 337v95H480v-95"/><path d="M895 337v95H720v-95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="425" y="432" width="350" height="112" rx="28" fill="#fbdce8" stroke="#b34d6f" stroke-width="5"/><text x="600" y="502">공통 키 조인</text>
+    </g>
+    <g stroke="#b34d6f" stroke-width="10" fill="none"><path d="M600 544v95H325v88"/><path d="M600 639H875v88"/></g>
+    <g font-size="30" font-weight="700">
+      <rect x="110" y="731" width="430" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="795">일치</text><text x="325" y="840" font-size="24" font-weight="500">값 동일 · 체크섬에 포함</text>
+      <rect x="660" y="731" width="430" height="150" rx="34" fill="#fff0d4" stroke="#ba7b16" stroke-width="6"/><text x="875" y="795">값 불일치 / A만 / B만</text><text x="875" y="840" font-size="24" font-weight="500">차이 · 누락 행을 골라 표시</text>
+    </g>
+    <g stroke="#b34d6f" stroke-width="8" fill="none"><path d="M325 881v88H480v-88"/><path d="M875 881v88H720v-88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="415" y="969" width="370" height="112" rx="28" fill="#ffffff" stroke="#b34d6f" stroke-width="5"/><text x="600" y="1022">대조 결과 CSV</text><text x="600" y="1060" font-size="24" font-weight="500">총액 차이 + 체크섬 표시</text>
+    </g>
+    <text x="600" y="1140" font-size="28" fill="#8a4459">두 시스템이 말한 숫자가 진짜로 같은지, 키별로</text>
+  </g>
+</svg>

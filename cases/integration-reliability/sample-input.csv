@@ -1,0 +1,9 @@
+id,code,message
+1001,HTTP/503,Server busy
+1002,TIMEOUT,Request timeout
+1003,INVALID_STATUS,Bad status
+1004,NOT_FOUND,Record not found
+1005,ERR_TIMEOUT,Network timeout
+1006,WEIRD-9X,Unknown code
+1007,,
+1002,HTTP/503,Server busy

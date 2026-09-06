@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">CSV Validator 처리 흐름</title>
+  <desc id="desc">아무 CSV든 올려서 규칙 설정 없이 빈 셀, 형식 혼합, 중복 행, 합계 불일치, 음수 값을 자동 점검하고 0건 또는 문제 행 목록으로 나뉘는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#eef6ff"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">CSV Validator</text>
+    <g font-size="34" font-weight="700">
+      <rect x="350" y="225" width="500" height="112" rx="28" fill="#ffffff" stroke="#8aa8d8" stroke-width="5"/><text x="600" y="295">내 CSV (규칙 설정 없음)</text>
+    </g>
+    <g stroke="#3d6bb3" stroke-width="10" fill="none"><path d="M600 337v95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="275" y="432" width="650" height="230" rx="28" fill="#dbeafe" stroke="#3d6bb3" stroke-width="5"/><text x="600" y="496">zero-config 자동 감사</text><text x="600" y="552" font-size="27" font-weight="500">중복 행 · 열당 형식 혼합 · 합계 행</text><text x="600" y="600" font-size="27" font-weight="500">금액 열 음수 · 빈 셀/전체 빈 열</text>
+    </g>
+    <g stroke="#3d6bb3" stroke-width="10" fill="none"><path d="M600 662v95H325v88"/><path d="M600 757H875v88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="140" y="845" width="370" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="910">0건</text><text x="325" y="955" font-size="25" font-weight="500">문제 없음 (SUCCEEDED)</text>
+      <rect x="690" y="845" width="370" height="150" rx="34" fill="#fff0d4" stroke="#ba7b16" stroke-width="6"/><text x="875" y="910">문제 행 목록</text><text x="875" y="955" font-size="25" font-weight="500">행 번호 · 열 · 차이까지</text>
+    </g>
+    <g stroke="#3d6bb3" stroke-width="8" fill="none"><path d="M325 995v88H480v-88"/><path d="M875 995v88H720v-88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="415" y="1083" width="370" height="76" rx="24" fill="#ffffff" stroke="#3d6bb3" stroke-width="5"/><text x="600" y="1132">감사 결과 CSV 다운로드</text>
+    </g>
+    <text x="600" y="1192" font-size="28" fill="#3d5580">설정 0개 — 파일만 올리면 점검은 기계가</text>
+  </g>
+</svg>
