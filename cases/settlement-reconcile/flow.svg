@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">정산 대사 처리 흐름</title>
+  <desc id="desc">정산서와 내 주문·배송 기록이 공통 키로 조인되어 일치, 값 불일치, 한쪽만 존재(미정산·무근거 후보), 중복정산 신호로 나뉘고 수수료 불일치와 정산-발주 일차 분포, 총액 차이로 검증되는 흐름</desc>
+  <rect width="1200" height="1200" rx="96" fill="#eef4ff"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172033">
+    <text x="600" y="120" font-size="54" font-weight="800">정산 대사 (Settlement Reconcile)</text>
+    <g font-size="34" font-weight="700">
+      <rect x="90" y="225" width="430" height="112" rx="28" fill="#ffffff" stroke="#7c9fd6" stroke-width="5"/><text x="305" y="295">플랫폼 정산서</text>
+      <rect x="680" y="225" width="430" height="112" rx="28" fill="#ffffff" stroke="#7c9fd6" stroke-width="5"/><text x="895" y="295">내 주문·배송 기록</text>
+    </g>
+    <g stroke="#3f6cb4" stroke-width="10" fill="none"><path d="M305 337v95H480v-95"/><path d="M895 337v95H720v-95"/></g>
+    <g font-size="34" font-weight="700">
+      <rect x="425" y="432" width="350" height="112" rx="28" fill="#dbeafe" stroke="#3f6cb4" stroke-width="5"/><text x="600" y="502">공통 키 조인</text>
+    </g>
+    <g stroke="#3f6cb4" stroke-width="10" fill="none"><path d="M600 544v95H325v88"/><path d="M600 639H875v88"/></g>
+    <g font-size="30" font-weight="700">
+      <rect x="110" y="731" width="430" height="150" rx="34" fill="#dcf7e8" stroke="#2d9462" stroke-width="6"/><text x="325" y="795">일치</text><text x="325" y="840" font-size="24" font-weight="500">값 동일 · 체크섬에 포함</text>
+      <rect x="660" y="731" width="430" height="150" rx="34" fill="#fff0d4" stroke="#ba7b16" stroke-width="6"/><text x="875" y="785">값 불일치 · 한쪽만 존재</text><text x="875" y="823" font-size="24" font-weight="500">미정산·무근거 후보 + 차이</text><text x="875" y="861" font-size="24" font-weight="500">같은 쪽 중복 = 중복정산 신호</text>
+    </g>
+    <g stroke="#3f6cb4" stroke-width="8" fill="none"><path d="M325 881v88H480v-88"/><path d="M875 881v88H720v-88"/></g>
+    <g font-size="32" font-weight="700">
+      <rect x="365" y="969" width="470" height="112" rx="28" fill="#ffffff" stroke="#3f6cb4" stroke-width="5"/><text x="600" y="1015">정산 대조 결과 CSV</text><text x="600" y="1055" font-size="24" font-weight="500">총액 차이 + 수수료 불일치 + 일차 분포 + 체크섬</text>
+    </g>
+    <text x="600" y="1140" font-size="28" fill="#3f6cb4">정산서의 숫자가 내 기록과 진짜로 같은지, 키별로</text>
+  </g>
+</svg>
