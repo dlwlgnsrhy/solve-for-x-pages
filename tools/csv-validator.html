@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>CSV 데이터 감사 도구</title>
+<style>:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --panel2: #1e222b;
+  --line: #2b3140;
+  --fg: #e7eaf0;
+  --muted: #9aa3b2;
+  --accent: #5aa9ff;
+  --ok: #3ecf8e;
+  --warn: #f5b93b;
+  --bad: #ff6b6b;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
+        "Noto Sans KR", "Segoe UI", sans-serif;
+  padding: 32px 20px 64px;
+}
+.wrap { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.01em; }
+.sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+.privacy {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: #12261c; border: 1px solid #1f5138; border-radius: 10px;
+  padding: 12px 14px; margin-bottom: 22px; font-size: 13.5px; color: #bdf0d6;
+}
+.privacy b { color: #7ff0bb; }
+.card {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 12px; padding: 18px; margin-bottom: 16px;
+}
+.card h2 { font-size: 15px; margin: 0 0 12px; color: var(--fg); }
+.drop {
+  border: 1.5px dashed var(--line); border-radius: 10px; padding: 22px 16px;
+  text-align: center; cursor: pointer; transition: border-color .15s, background .15s;
+  background: var(--panel2);
+}
+.drop:hover, .drop.over { border-color: var(--accent); background: #1b2330; }
+.drop .big { font-size: 14px; font-weight: 600; }
+.drop .small { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.drop.has { border-color: var(--ok); border-style: solid; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+input[type=file] { display: none; }
+button {
+  font: inherit; font-weight: 600; border-radius: 9px; border: 1px solid transparent;
+  padding: 10px 18px; cursor: pointer;
+}
+.primary { background: var(--accent); color: #05111f; }
+.primary:disabled { background: #2b3140; color: #6b7382; cursor: not-allowed; }
+.ghost { background: transparent; color: var(--fg); border-color: var(--line); }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.status { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; }
+.s-ok { background: #123425; color: var(--ok); }
+.s-warn { background: #3a2f10; color: var(--warn); }
+.s-bad { background: #3a1a1a; color: var(--bad); }
+.headline { font-size: 15px; margin: 10px 0 0; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 10px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+td.num { white-space: nowrap; color: var(--muted); }
+.err {
+  background: #2a1618; border: 1px solid #5a2b2f; color: #ffc9c9;
+  border-radius: 10px; padding: 14px 16px; font-size: 14px;
+}
+.err b { display: block; margin-bottom: 4px; color: #ff9d9d; }
+.err .hint { color: #e0a5a5; font-size: 13px; margin-top: 6px; }
+.hidden { display: none; }
+.meta { color: var(--muted); font-size: 12.5px; }
+.foot { color: var(--muted); font-size: 12.5px; margin-top: 28px; line-height: 1.7; }
+.limits { background: var(--panel2); border-radius: 10px; padding: 14px 16px; font-size: 13px; color: var(--muted); }
+.limits b { color: var(--fg); }
+.limits ul { margin: 8px 0 0; padding-left: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>CSV 데이터 감사 도구</h1>
+  <p class="sub">CSV를 올리면 규칙 설정 없이 자동으로 점검합니다 — 빈 셀 · 열별 형식 혼합 · 중복 행 · 합계 행 불일치 · 금액 열의 음수 · 전체가 빈 열.</p>
+
+  <div class="privacy">
+    <span>🔒</span>
+    <div><b>올린 파일은 어디로도 전송되지 않습니다.</b>
+    이 파일 하나에 모든 계산이 들어 있고, 브라우저 안에서만 실행됩니다.
+    인터넷 연결을 끊고 써도 똑같이 동작합니다. 확인하려면 Wi-Fi를 끄고 다시 해보세요.</div>
+  </div>
+
+  <div class="card">
+    <h2>1. 점검할 CSV 선택</h2>
+    <div class="drop" id="drop">
+      <div class="big">CSV 파일 선택</div>
+      <div class="small">또는 여기에 끌어다 놓기</div>
+    </div>
+    <input type="file" id="file" accept=".csv,text/csv">
+    <div class="row" style="margin-top:14px">
+      <button class="primary" id="run" disabled>점검하기</button>
+      <a href="#" id="sample" class="meta">샘플 CSV 내려받기</a>
+    </div>
+  </div>
+
+  <div class="card hidden" id="out"></div>
+
+  <div class="limits">
+    <b>이 도구가 하는 일과 하지 않는 일</b>
+    <ul>
+      <li>합니다 — 빈 셀, 열별 형식 혼합(숫자·날짜·텍스트), 완전히 동일한 중복 행, 합계 행과 데이터 합의 불일치, 금액으로 보이는 열의 음수, 전체가 빈 열을 찾아 표시합니다.</li>
+      <li>하지 않습니다 — 값이 업무적으로 맞는지는 판단하지 않습니다. 파일을 고쳐주지도 않습니다. 무엇이 이상한지 알려줄 뿐, 고칠지 말지는 사람이 정합니다.</li>
+      <li>모든 행의 열 개수가 같아야 읽을 수 있습니다. 다르면 몇 행이 어긋났는지 알려줍니다.</li>
+      <li>한글 인코딩은 UTF-8(BOM 포함) · EUC-KR/CP949 · UTF-16을 자동 인식합니다.</li>
+    </ul>
+  </div>
+
+  <p class="foot">단일 HTML 파일 · 설치 없음 · 서버 없음 · 네트워크 전송 없음<br>
+  파일을 더블클릭하면 브라우저에서 바로 열립니다. USB에 담아 옮겨도 그대로 동작합니다.</p>
+</div>
+<script>var exports = {};
+
+exports.CsvError = void 0;
+exports.decodeCsvBytes = decodeCsvBytes;
+exports.parseCsv = parseCsv;
+// 브라우저 CSV 파서 — 서버로 보내지 않고 파일 바이트를 이 브라우저 안에서만 처리합니다.
+// 인코딩: BOM 있는 UTF-16(LE/BE) → UTF-8(fatal) → EUC-KR/CP949(ksc5601) fallback.
+// 분할자: 쉼표·세미콜론·탭 자동 감지(따옴표 내분할자 무시).
+class CsvError extends Error {
+    constructor(message, hint) {
+        super(message);
+        this.name = "CsvError";
+        this.hint = hint;
+    }
+}
+exports.CsvError = CsvError;
+function decodeCsvBytes(bytes) {
+    // UTF-16 BOM(FF FE / FE FF) — 2바이트 인코딩
+    if (bytes.length >= 2 && bytes[0] === 0xff && bytes[1] === 0xfe) {
+        return { text: new TextDecoder("utf-16le").decode(bytes.subarray(2)), encoding: "utf-16" };
+    }
+    if (bytes.length >= 2 && bytes[0] === 0xfe && bytes[1] === 0xff) {
+        return { text: new TextDecoder("utf-16be").decode(bytes.subarray(2)), encoding: "utf-16" };
+    }
+    // UTF-8 BOM(EF BB BF) 제거 후 UTF-8 strict decode
+    const stripped = bytes.length >= 3 && bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf
+        ? bytes.subarray(3)
+        : bytes;
+    try {
+        return { text: new TextDecoder("utf-8", { fatal: true }).decode(stripped), encoding: "utf-8" };
+    }
+    catch {
+        // UTF-8이 아닌 한국 실무 파일(EUC-KR/CP949) — ksc5601로 재시도
+        try {
+            return { text: new TextDecoder("ksc5601").decode(stripped), encoding: "ksc5601" };
+        }
+        catch {
+            throw new CsvError("파일을 읽을 수 없습니다 — 인코딩을 식별할 수 없습니다.", "UTF-8 또는 EUC-KR/CP949 인코딩의 CSV인지 확인하세요 — 샘플 파일을 내려받아 형태를 대조하세요.");
+        }
+    }
+}
+function countDelimiters(line) {
+    const counts = { ",": 0, ";": 0, "\t": 0 };
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i += 1) {
+        const ch = line[i];
+        if (ch === '"') {
+            inQuotes = !inQuotes;
+        }
+        else if (!inQuotes && ch in counts) {
+            counts[ch] += 1;
+        }
+    }
+    return counts;
+}
+function detectDelimiter(line) {
+    const counts = countDelimiters(line);
+    const best = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+    if (!best || best[1] === 0) {
+        throw new CsvError("분할자를 찾지 못했습니다.", "쉼표(,)·세미콜론(;)·탭 중 하나로 열을 구분해 다시 저장하세요 — 샘플 파일을 내려받아 형태를 확인하세요.");
+    }
+    return best[0];
+}
+function splitLine(line, delimiter) {
+    const out = [];
+    let cur = "";
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i += 1) {
+        const ch = line[i];
+        if (inQuotes) {
+            if (ch === '"' && line[i + 1] === '"') {
+                cur += '"';
+                i += 1;
+            }
+            else if (ch === '"') {
+                inQuotes = false;
+            }
+            else {
+                cur += ch;
+            }
+        }
+        else if (ch === '"') {
+            inQuotes = true;
+        }
+        else if (ch === delimiter) {
+            out.push(cur);
+            cur = "";
+        }
+        else {
+            cur += ch;
+        }
+    }
+    out.push(cur);
+    return out.map((cell) => cell.trim());
+}
+function parseCsv(rawText, encoding = "utf-8") {
+    const text = rawText.replace(/^\uFEFF/, "");
+    const lines = text.split(/\r\n|\n|\r/).filter((line) => line.trim() !== "");
+    if (lines.length === 0) {
+        throw new CsvError("파일이 비어 있습니다.", "데이터 행이 1개 이상인 CSV를 올려주세요.");
+    }
+    const delimiter = detectDelimiter(lines[0]);
+    const headers = splitLine(lines[0], delimiter).map((h) => h.trim().toLowerCase());
+    const rows = [];
+    for (let i = 1; i < lines.length; i += 1) {
+        const cells = splitLine(lines[i], delimiter);
+        if (cells.length !== headers.length) {
+            throw new CsvError(`데이터 ${i + 1}행의 열 수(${cells.length})가 헤더 열 수(${headers.length})와 다릅니다.`, "모든 행의 열 개수가 같아야 합니다 — 복사·붙여넣기 중 줄이 끊겼을 수 있습니다.");
+        }
+        rows.push(cells);
+    }
+    if (rows.length === 0) {
+        throw new CsvError("헤더만 있고 데이터 행이 없습니다.", "헤더 아래에 데이터가 1행 이상 필요합니다.");
+    }
+    return { headers, rows, delimiter, encoding };
+}
+
+// P6 — CSV 자동 감사 (zero-config).
+// 어떤 CSV든 올려도 규칙 설정 없이 자동으로: 빈 셀, 열당 형식 혼합, 중복 행,
+// 합계 행 불일치, 금액 열의 음수, 전체 빈 열을 점검합니다.
+// “UI 또는 규칙 CSV” 설계를 버린 이유는 아래 사례의 제한사항에서 정직하게 고지합니다.
+exports.csvValidatorAdapter = void 0;
+const BOM = "\uFEFF";
+const TOTAL_LABELS = ["합계", "총계", "total", "grand_total", "grandtotal", "계"];
+const MONEY_HINTS = ["금액", "price", "amount", "가격", "원", "total", "합계", "cost", "fee", "단가"];
+function isNumeric(value) {
+    const cleaned = value.replace(/[\s,원%]/g, "");
+    if (cleaned === "" || cleaned === "-" || cleaned === "—")
+        return false;
+    return /^-?\d+(\.\d+)?$/.test(cleaned);
+}
+function isDateLike(value) {
+    return /^\d{4}[-/.]\d{1,2}[-/.]\d{1,2}(\s\d{1,2}:\d{1,2}(:\d{1,2})?)?$/.test(value.trim()) ||
+        /^\d{8}$/.test(value.trim());
+}
+function familyOf(value) {
+    if (isNumeric(value))
+        return "숫자";
+    if (isDateLike(value))
+        return "날짜";
+    return "텍스트";
+}
+function esc(value) {
+    return /[",\n]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value;
+}
+function runAudit(rows, headers) {
+    const colCount = headers.length;
+    const issues = [];
+    const rowCount = rows.length;
+    // 열별 가족(형식) 분포
+    const colFamilies = headers.map(() => new Map());
+    const emptyByCol = headers.map(() => 0);
+    const negativeByCol = headers.map(() => 0);
+    const moneyCols = headers
+        .map((h, i) => ({ name: h, index: i, isMoney: MONEY_HINTS.some((hint) => h.toLowerCase().includes(hint)) }))
+        .filter((c) => c.isMoney);
+    rows.forEach((cells, i) => {
+        cells.forEach((cell, c) => {
+            const value = cell.trim();
+            if (value === "" || value === "-") {
+                emptyByCol[c] += 1;
+                return;
+            }
+            const family = familyOf(value);
+            const map = colFamilies[c];
+            map.set(family, (map.get(family) ?? 0) + 1);
+            if (isNumeric(value) && Number(value.replace(/[\s,원%]/g, "")) < 0) {
+                negativeByCol[c] += 1;
+            }
+        });
+    });
+    // 1) 형식 혼합
+    headers.forEach((name, c) => {
+        const families = [...colFamilies[c].keys()];
+        if (families.length > 1) {
+            const detail = families.map((f) => `${f} ${colFamilies[c].get(f)}`).join(" · ");
+            issues.push({ row: null, column: name, check: "형식 혼합", detail: `열 ‘${name}’에 형식이 섞여 있습니다 (${detail}).` });
+        }
+    });
+    // 2) 전체 빈 열
+    headers.forEach((name, c) => {
+        if (emptyByCol[c] === rowCount) {
+            issues.push({ row: null, column: name, check: "전체 빈 열", detail: `열 ‘${name}’은 ${rowCount}행 모두 비어 있습니다.` });
+        }
+    });
+    // 3) 중복 행 (행 전체 정확 매칭)
+    const seen = new Map();
+    rows.forEach((cells, i) => {
+        const key = cells.map((c) => c.trim()).join("\u0001");
+        const firstRow = seen.get(key);
+        if (firstRow !== undefined) {
+            issues.push({
+                row: i + 2,
+                column: null,
+                check: "중복 행",
+                detail: `${i + 2}행이 ${firstRow + 2}행과 완전히 동일합니다 — 한 번만 반영되어야 하면 중복입니다.`,
+            });
+        }
+        else {
+            seen.set(key, i);
+        }
+    });
+    // 4) 합계 행 점검
+    const totalRowIndex = rows.findIndex((cells) => cells.slice(0, 2).some((cell) => {
+        const label = cell.trim().toLowerCase();
+        return TOTAL_LABELS.some((t) => label === t || label.startsWith(t));
+    }));
+    if (totalRowIndex !== -1) {
+        const totalCells = rows[totalRowIndex];
+        headers.forEach((name, c) => {
+            const totalValue = (totalCells[c] ?? "").trim();
+            if (!isNumeric(totalValue))
+                return;
+            const claimed = Number(totalValue.replace(/[\s,원%]/g, ""));
+            const columnValues = rows
+                .slice(0, totalRowIndex)
+                .map((cells) => (cells[c] ?? "").trim())
+                .filter((v) => isNumeric(v))
+                .map((v) => Number(v.replace(/[\s,원%]/g, "")));
+            const sum = columnValues.reduce((a, b) => a + b, 0);
+            if (claimed !== sum) {
+                issues.push({
+                    row: totalRowIndex + 2,
+                    column: name,
+                    check: "합계 불일치",
+                    detail: `열 ‘${name}’ 합계 ${claimed.toLocaleString("ko-KR")} ≠ 데이터 합 ${sum.toLocaleString("ko-KR")} (차이 ${(claimed - sum).toLocaleString("ko-KR")}). 숫자가 아닌 값은 계산에서 제외됐습니다.`,
+                });
+            }
+        });
+    }
+    // 5) 금액 열 음수
+    for (const col of moneyCols) {
+        const count = negativeByCol[col.index];
+        if (count > 0) {
+            const rowNos = [];
+            rows.forEach((cells, i) => {
+                const v = (cells[col.index] ?? "").trim();
+                if (isNumeric(v) && Number(v.replace(/[\s,원%]/g, "")) < 0)
+                    rowNos.push(i + 2);
+            });
+            issues.push({
+                row: null,
+                column: col.name,
+                check: "음수 값",
+                detail: `금액 열 ‘${col.name}’에 음수 ${count}건 (${rowNos.join(", ")}행) — 정정·환불인지 확인하세요.`,
+            });
+        }
+    }
+    const issueCount = issues.length;
+    const status = issueCount === 0 ? "SUCCEEDED" : "PARTIAL_FAILURE";
+    const emptySummary = headers
+        .map((name, c) => (emptyByCol[c] > 0 ? `${name} ${emptyByCol[c]}개` : null))
+        .filter(Boolean)
+        .join(" · ");
+    const summaryRows = [
+        { label: "크기", value: `${rowCount}행 × ${colCount}열` },
+        { label: "검출된 이슈", value: `${issueCount}건` },
+        { label: "빈 셀", value: emptySummary || "없음" },
+        { label: "합계 행", value: totalRowIndex === -1 ? "없음(합계 점검 생략)" : `${totalRowIndex + 2}행에서 점검` },
+        { label: "금액 열", value: moneyCols.map((c) => c.name).join(", ") || "인식되지 않음" },
+    ];
+    const failures = issues.map((issue) => ({
+        row: issue.row ?? 0,
+        reason: issue.detail,
+        detail: issue.column ? `열: ${issue.column} · 점검: ${issue.check}` : `점검: ${issue.check}`,
+    }));
+    const csvLines = ["행,열,점검,상세"];
+    for (const issue of issues) {
+        csvLines.push([String(issue.row ?? "-"), esc(issue.column ?? "-"), issue.check, esc(issue.detail)].join(","));
+    }
+    const headline = issueCount === 0
+        ? `${rowCount}행 × ${colCount}열 자동 감사 — 0건 (문제 없음)`
+        : `${rowCount}행 × ${colCount}열 자동 감사 — ${issueCount}건 이슈 (중복·형식·합계·음수·빈값 점검 완료)`;
+    return {
+        status,
+        headline,
+        summaryRows,
+        failures,
+        downloadCsv: BOM + csvLines.join("\n") + "\n",
+        downloadName: "csv-audit-result.csv",
+    };
+}
+exports.csvValidatorAdapter = {
+    kitId: "csv-validator",
+    question: "이 CSV에 내가 보지 못한 문제가 숨어 있는가",
+    requiredHeaders: [],
+    run: runAudit,
+    sampleInputUrl: "/cases/csv-validator/sample-input.csv",
+};
+</script>
+<script>// ── 공통 UI 헬퍼 (네트워크 호출 없음) ──────────────────────────────────────
+function $(id) { return document.getElementById(id); }
+
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+  });
+}
+
+var ENC_LABEL = { "utf-8": "UTF-8", "ksc5601": "EUC-KR/CP949", "utf-16": "UTF-16" };
+
+// File → { headers, rows, encoding } · 실패 시 사람이 읽을 수 있는 Error
+function readCsvFile(file) {
+  return new Promise(function (resolve, reject) {
+    var fr = new FileReader();
+    fr.onerror = function () { reject(new Error("파일을 읽지 못했습니다 — 다른 파일로 다시 시도해 주세요.")); };
+    fr.onload = function () {
+      try {
+        var bytes = new Uint8Array(fr.result);
+        if (bytes.length === 0) {
+          var e0 = new Error("파일이 비어 있습니다.");
+          e0.hint = "데이터 행이 1개 이상인 CSV를 올려주세요.";
+          throw e0;
+        }
+        var dec = decodeCsvBytes(bytes);
+        var parsed = parseCsv(dec.text, dec.encoding);
+        parsed.encoding = dec.encoding;
+        parsed.fileName = file.name;
+        resolve(parsed);
+      } catch (err) { reject(err); }
+    };
+    fr.readAsArrayBuffer(file);
+  });
+}
+
+function showError(el, err) {
+  var hint = err && err.hint ? '<div class="hint">' + esc(err.hint) + "</div>" : "";
+  var msg = (err && err.message) || "알 수 없는 오류가 발생했습니다.";
+  el.innerHTML = '<div class="err"><b>읽을 수 없습니다</b>' + esc(msg) + hint + "</div>";
+  el.classList.remove("hidden");
+}
+
+function statusChip(status) {
+  if (status === "SUCCEEDED") return '<span class="status s-ok">문제 없음</span>';
+  if (status === "PARTIAL_FAILURE") return '<span class="status s-warn">확인 필요</span>';
+  return '<span class="status s-bad">대조 불가</span>';
+}
+
+// RunResult → DOM
+function renderResult(el, result, meta) {
+  var h = [];
+  h.push('<div class="row">' + statusChip(result.status) +
+         (meta ? '<span class="meta">' + esc(meta) + "</span>" : "") + "</div>");
+  h.push('<p class="headline">' + esc(result.headline) + "</p>");
+
+  if (result.summaryRows && result.summaryRows.length) {
+    h.push("<table><tbody>");
+    result.summaryRows.forEach(function (r) {
+      h.push("<tr><th>" + esc(r.label) + "</th><td>" + esc(r.value) + "</td></tr>");
+    });
+    h.push("</tbody></table>");
+  }
+
+  if (result.failures && result.failures.length) {
+    h.push('<h2 style="margin-top:18px">확인이 필요한 항목 ' + result.failures.length + "건</h2>");
+    h.push("<table><thead><tr><th>위치</th><th>내용</th></tr></thead><tbody>");
+    result.failures.forEach(function (f) {
+      var where = f.rowLabel || (f.row ? f.row + "행" : "-");
+      var detail = f.detail ? '<div class="meta">' + esc(f.detail) + "</div>" : "";
+      h.push('<tr><td class="num">' + esc(where) + "</td><td>" + esc(f.reason) + detail + "</td></tr>");
+    });
+    h.push("</tbody></table>");
+  }
+
+  if (result.downloadCsv) {
+    h.push('<div class="row" style="margin-top:16px">' +
+           '<button class="ghost" id="dl">결과 CSV 내려받기</button></div>');
+  }
+  el.innerHTML = h.join("");
+  el.classList.remove("hidden");
+
+  var dl = $("dl");
+  if (dl) {
+    dl.onclick = function () {
+      // Blob URL — 로컬 생성. 서버 전송 아님.
+      var blob = new Blob([result.downloadCsv], { type: "text/csv;charset=utf-8" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = result.downloadName || "result.csv";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    };
+  }
+}
+
+// 드롭존 배선: 클릭·드래그앤드롭 둘 다 1클릭으로 파일 선택
+function wireDrop(dropId, inputId, onPick) {
+  var drop = $(dropId), input = $(inputId);
+  drop.onclick = function () { input.click(); };
+  drop.ondragover = function (e) { e.preventDefault(); drop.classList.add("over"); };
+  drop.ondragleave = function () { drop.classList.remove("over"); };
+  drop.ondrop = function (e) {
+    e.preventDefault();
+    drop.classList.remove("over");
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) onPick(e.dataTransfer.files[0]);
+  };
+  input.onchange = function () { if (input.files[0]) onPick(input.files[0]); };
+}
+
+function markPicked(dropId, file, parsed) {
+  var drop = $(dropId);
+  drop.classList.add("has");
+  drop.querySelector(".big").textContent = file.name;
+  drop.querySelector(".small").textContent =
+    parsed ? parsed.rows.length + "행 · " + parsed.headers.length + "열 · " + (ENC_LABEL[parsed.encoding] || parsed.encoding)
+           : "읽는 중…";
+}
+</script>
+<script>// 샘플 CSV — 일부러 문제를 심어 뒀다(중복 행 · 형식 혼합 · 합계 불일치 · 빈 셀 · 음수).
+var SAMPLE_CSV = [
+  "주문번호,주문일,상품명,수량,금액,비고",
+  "A-1001,2026-08-01,무선마우스,2,24000,",
+  "A-1002,2026-08-01,키보드,1,55000,",
+  "A-1003,2026/08/02,모니터암,1,89000,",
+  "A-1004,20260802,USB허브,3,36000,",
+  "A-1005,2026-08-03,노트북거치대,1,,",
+  "A-1006,2026-08-03,랜케이블,5,15000,",
+  "A-1006,2026-08-03,랜케이블,5,15000,",
+  "A-1007,2026-08-04,도킹스테이션,1,-42000,환불",
+  "A-1008,미정,웹캠,1,68000,",
+  "합계,,,,350000,"
+].join("\n") + "\n";
+</script>
+<script>// ── CSV 데이터 감사 도구 — 앱 배선 ────────────────────────────────────────
+// 판정 로직은 전부 runAudit()(라이브 데모와 동일 엔진). 여기서는 입력·표시만 한다.
+(function () {
+  var picked = null;
+
+  wireDrop("drop", "file", function (file) {
+    markPicked("drop", file, null);
+    $("out").classList.add("hidden");
+    readCsvFile(file).then(function (parsed) {
+      picked = parsed;
+      markPicked("drop", file, parsed);
+      $("run").disabled = false;
+      $("out").classList.add("hidden");
+    }).catch(function (err) {
+      picked = null;
+      $("run").disabled = true;
+      $("drop").classList.remove("has");
+      $("drop").querySelector(".big").textContent = "CSV 파일 선택";
+      $("drop").querySelector(".small").textContent = "또는 여기에 끌어다 놓기";
+      showError($("out"), err);
+    });
+  });
+
+  $("run").onclick = function () {
+    if (!picked) return;
+    try {
+      var result = runAudit(picked.rows, picked.headers);
+      renderResult($("out"), result,
+        picked.fileName + " · " + (ENC_LABEL[picked.encoding] || picked.encoding) + "로 읽음");
+    } catch (err) {
+      showError($("out"), err);
+    }
+  };
+
+  $("sample").onclick = function (e) {
+    e.preventDefault();
+    var blob = new Blob([SAMPLE_CSV], { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "샘플-감사용.csv";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  };
+})();
+</script>
+</body>
+</html>
