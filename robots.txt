@@ -6,4 +6,22 @@ Disallow: /app
 Disallow: /dashboard
 Disallow: /factory
 
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-User
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: CCBot
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /app
+Disallow: /dashboard
+Disallow: /factory
+
+Host: https://www.solve-for-x.net
 Sitemap: https://www.solve-for-x.net/sitemap.xml

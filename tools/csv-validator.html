@@ -56,6 +56,18 @@ button {
   font: inherit; font-weight: 600; border-radius: 9px; border: 1px solid transparent;
   padding: 10px 18px; cursor: pointer;
 }
+/* 결과 다음 행동을 안내하는 링크 — 위 button 규칙과 같은 모양을 a 에 적용한다.
+   버튼 스타일이 button 선택자에만 걸려 있어 링크용 규칙을 따로 둔다. */
+a.cta-link {
+  display: inline-block; text-decoration: none;
+  font: inherit; font-weight: 600; border-radius: 9px; border: 1px solid var(--line);
+  padding: 10px 18px; cursor: pointer;
+  background: transparent; color: var(--fg);
+}
+.next-step {
+  margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line);
+}
+.next-step p { margin: 0 0 12px; font-size: 14px; line-height: 1.7; }
 .primary { background: var(--accent); color: #05111f; }
 .primary:disabled { background: #2b3140; color: #6b7382; cursor: not-allowed; }
 .ghost { background: transparent; color: var(--fg); border-color: var(--line); }
@@ -461,6 +473,52 @@ function statusChip(status) {
   return '<span class="status s-bad">대조 불가</span>';
 }
 
+// 결과 다음 단계 — 도구를 왜 쓰게 됐는지 한 번 더 말하고, 다음 행동을 한 곳만 가리킨다.
+// 더 쓸 만한 도구를 나열하지 않는다. 한 경로로 모은다.
+var NEXT_STEP = {
+  tool: "csv-validator",
+  reason: "이 검사를 매주 손으로 반복하고 있다면, 같은 확인을 자동으로 돌리도록 바꿀 수 있습니다. 지금 흐름에서 어디서 막히는지부터 무료로 확인합니다.",
+  href: "/business/automation-diagnostic",
+  label: "반복 데이터 점검 자동화 범위 확인하기"
+};
+
+function pushNextStep(h) {
+  h.push('<div class="next-step"><p>' + esc(NEXT_STEP.reason) + '</p>' +
+         '<a class="cta-link" id="next-step-cta" href="' + NEXT_STEP.href + '" target="_blank" rel="noopener noreferrer">' +
+         esc(NEXT_STEP.label) + " \u2192</a></div>");
+}
+
+// 이 도구 HTML에는 분석 코드를 넣지 않는다. "결과가 나왔다는 사실"만 같은 출처의 부모에게
+// 알리고 실제 전송은 부모 페이지가 한다 — 도구 파일의 "외부 요청 0건" 약속을 지키기 위해.
+// 파일명·행 수·불일치 건수는 여기서도 싣지 않는다.
+// 결과에 붙은 상담 링크를 눌렀음을 같은 출처의 부모에게 알린다. 실제 전송은 부모 페이지가 한다.
+// 클릭 시점의 주소나 파일명, 행 수는 여기서도 싣지 않는다 — 도구 id 만 보낸다.
+function wireCta() {
+  var cta = $("next-step-cta");
+  if (!cta) return;
+  cta.addEventListener("click", function () {
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage(
+          { type: "sfx-tool-cta", tool: NEXT_STEP.tool },
+          window.location.origin
+        );
+      }
+    } catch (e) { /* 부모 접근이 막혀도 링크 이동은 그대로 동작한다 */ }
+  });
+}
+
+function notifyResult() {
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage(
+        { type: "sfx-tool-result", tool: NEXT_STEP.tool },
+        window.location.origin
+      );
+    }
+  } catch (e) { /* 부모 접근이 막혀도 도구 기능 자체는 그대로 동작한다 */ }
+}
+
 // RunResult → DOM
 function renderResult(el, result, meta) {
   var h = [];
@@ -491,6 +549,7 @@ function renderResult(el, result, meta) {
     h.push('<div class="row" style="margin-top:16px">' +
            '<button class="ghost" id="dl">결과 CSV 내려받기</button></div>');
   }
+  pushNextStep(h);
   el.innerHTML = h.join("");
   el.classList.remove("hidden");
 
@@ -508,6 +567,9 @@ function renderResult(el, result, meta) {
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
     };
   }
+
+  wireCta();
+  notifyResult();
 }
 
 // 드롭존 배선: 클릭·드래그앤드롭 둘 다 1클릭으로 파일 선택

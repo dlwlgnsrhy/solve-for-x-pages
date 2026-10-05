@@ -1,0 +1,52 @@
+# Solve for X
+
+> 반복되는 문제를 소프트웨어로 바꾸는 문제 해결 스튜디오. 개인과 작은 팀의 반복 업무를 진단해
+> 작은 웹도구·업무 자동화·AI 연결형 프로토타입으로 해결합니다. 무료 적합성 확인과 무료 상세 진단을 거쳐
+> 고정 범위로 구축합니다.
+
+중요: 이 사이트의 완료된 고객 계약은 아직 0건입니다. 가격과 범위는 첫 결과를 확인하기 위한 값이며,
+검증되지 않은 성과 수치를 이 사이트는 게시하지 않습니다.
+
+## 무료 도구 (설치 없이 브라우저에서 실행, 업로드 파일은 서버로 전송되지 않음)
+- [/tools/settlement-reconcile](https://www.solve-for-x.net/tools/settlement-reconcile): 정산서와 주문 기록을 건별 대조해 금액 불일치·미정산·중복을 찾는 무료 도구
+- [/tools/csv-validator](https://www.solve-for-x.net/tools/csv-validator): CSV 중복 행·형식 혼합·합계 불일치·음수를 찾는 무료 도구
+- [/fee-calculator](https://www.solve-for-x.net/fee-calculator): 크몽·위시켓 수수료와 실정산을 계산하는 무료 계산기
+
+## 가격 (신규 접수 시작 가격)
+- 개인형 파일럿: 190,000원부터 — 혼자 쓰는 하나의 핵심 흐름을 빠르게 검증할 때. 포함: 핵심 흐름 1개, 최대 3화면, 웹/PWA, 기기 로컬 저장
+- 공유형 프로토타입: 390,000원부터 — 팀·가족·고객이 로그인해 같은 데이터를 사용할 때. 포함: 최대 5화면, 로그인, 데이터베이스, 사용자 역할 최대 2종
+- AI 연결형 프로토타입: 590,000원부터 — 공유 흐름에 AI 자동화 한 가지를 검증할 때. 포함: 공유형 프로토타입 범위, AI 기능 1개, 사용량 제한, AI 실패 시 대체 동작
+- 자동화 상세 진단: 무료 — 3영업일 안에 결과물 전달. 산출물: 현재·목표 흐름도, 익명 샘플 매핑, 위험 판정, 고정 범위 구축 견적
+- 무료 적합성 확인: 무료 — 10~20분
+
+## 핵심 경로
+- [/business/automation-diagnostic](https://www.solve-for-x.net/business/automation-diagnostic): 기업 반복 업무의 무료 적합성 확인과 무료 상세 진단
+- [/personal-solutions](https://www.solve-for-x.net/personal-solutions): 개인·소규모 반복 문제의 문제 진단 신청
+- [/pricing](https://www.solve-for-x.net/pricing): 시작 가격과 고정 범위, 별도 견적 항목
+- [/how-we-work](https://www.solve-for-x.net/how-we-work): 접수부터 납품까지의 진행 과정
+- [/cases](https://www.solve-for-x.net/cases): 공개 제품 사례와 검증 상태
+- [/labs](https://www.solve-for-x.net/labs): 측정값과 사고 회고
+- [/resources](https://www.solve-for-x.net/resources): 범위를 스스로 좁혀보는 무료 자료
+- [/guides](https://www.solve-for-x.net/guides): 정산 대조·CSV 오류·엑셀 자동화를 시작하기 전에 읽는 순서
+
+## 문제 중심 콘텐츠 (답을 먼저 제시하는 순서 안내)
+- [쇼핑몰 정산 금액이 주문 기록과 다를 때 확인하는 순서](https://www.solve-for-x.net/guides/settlement-mismatch-checklist): 금액이 다르면 대부분 정산이 잘못된 것이 아니라 두 파일의 기준이 다른 경우입니다. 먼저 공통 키(주문번호)로 두 파일을 맞춘 뒤, 금액 차이·한쪽에만 있는 건·중복·수수료 차이·정산 일차 다섯 가지를 순서대로 보면 원인이 좁혀집니다. 아래 순서대로 확인해 보십시오.
+- [CSV 중복과 합계 오류를 찾는 방법](https://www.solve-for-x.net/guides/csv-duplicate-sum-errors): CSV에서 실제로 시간을 먹는 오류는 네 종류입니다. 통째로 중복된 행, 한 열에 섞인 형식, 합계 행과 실제 값의 어긋남, 그리고 이유가 없는 음수입니다. 이 넷은 스프레드시트를 눈으로 훑어서는 놓치기 쉽지만 규칙 없이도 기계가 바로 찾아냅니다. 아래 도구로 먼저 걸러낸 뒤 원인을 보십시오.
+- [엑셀 반복 업무를 자동화하기 전에 정리할 것](https://www.solve-for-x.net/guides/before-automating-excel-work): 엑셀 반복 업무는 흐름 하나로 좁혀서 넘기는 것이 가장 빠릅니다. 입력→처리→결과가 하나의 줄로 이어지고, 사람 개입 지점이 한 군데일 때 자동화가 쉽습니다. 반대로 업무가 두 개 이상 섞여 있으면 먼저 나눠야 합니다. 개발을 시작하기 전에 아래 다섯 가지를 정리하십시오.
+
+## 기술 자산 카탈로그
+- [수수료·견적 계산기](https://www.solve-for-x.net/fee-calculator): 매출·인건비를 넣으면 플랫폼 수수료와 견적이 나옵니다 — 같은 계산 상태가 링크로 공유됩니다.
+- [정산 대사](https://www.solve-for-x.net/demos/settlement-reconcile): 플랫폼 정산서와 내 주문·배송 기록을 건별로 대조 — 미정산·무근거정산 후보·값 불일치·중복정산 신호를 브라우저 안에서 확인합니다.
+- [BI Report Kit](https://www.solve-for-x.net/demos/bi-report): 집계한 숫자가 원데이터와 일치하는지 기계가 검증하는 BI 리포트 구조 — 주 합산과 일별 합을 두 경로로 교차 확인합니다.
+- [Cafe24 Sync Kit](https://www.solve-for-x.net/demos/cafe24-sync): 1건의 주문 실패가 전체를 막지 않고 중복 없이 재처리되는 쇼핑몰 주문 동기화 구조 — 주문번호 멱등 키로 중복을 거릅니다.
+- [CSV Validator](https://www.solve-for-x.net/demos/csv-validator): 규칙 설정 0 — 어떤 CSV든 중복·형식 혼합·합계 불일치·음수·빈 셀을 브라우저 안에서 자동 감사합니다.
+- [AI Brief Kit](https://www.solve-for-x.net/demos/ai-brief): 건 제목+금액으로 분류·수수료 구간·1페이지 제안 초안을 LLM 없이 결정적 규칙으로 — 같은 입력이면 항상 같은 출력입니다.
+- [Integration Reliability Kit](https://www.solve-for-x.net/demos/integration-reliability): 정상 행을 보존하고 깨진 행만 원인과 함께 분리해 수정한 행만 재처리하는 연동 실패 트리아지 — 일시적/영구/확인 필요 3분류로 나눕니다.
+- [ERP Ledger Kit](https://www.solve-for-x.net/demos/erp-ledger): 서로 다른 형식의 여러 ERP 전표를 한 장부로 — 차·대변 균형 검증과 전표번호 멱등 키의 중복 업로드 차단을 브라우저 안에서 확인합니다.
+
+## 전체 본문
+- [llms-full.txt](https://www.solve-for-x.net/llms-full.txt): 위 목록의 본문, 가격 상세, 도해 방법, 공개 사례의 검증 상태를 모두 담은 한 파일.
+
+## 연락
+- 문의: soluni@solve-for-x.net
+- 전체 페이지 색인: https://www.solve-for-x.net/sitemap.xml
