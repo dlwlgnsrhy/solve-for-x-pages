@@ -1,0 +1,13 @@
+홈에서 쓰는 표시 서체 두 종. 둘 다 SIL Open Font License 1.1 이며, 필요한 글자만 남긴 서브셋이다
+(scripts/build-display-fonts.py). 서브셋은 파생물이므로 같은 라이선스를 따른다.
+
+Anton
+  Copyright 2020 The Anton Project Authors (https://github.com/googlefonts/AntonFont.git)
+  https://github.com/google/fonts/tree/main/ofl/anton
+
+Nanum Pen Script
+  Copyright (c) 2010, NHN Corporation (http://www.nhncorp.com), with Reserved Font Name Nanum, Naver, NanumGothic, Naver NanumGothic, NanumMyeongjo, Naver NanumMyeongjo, NanumBrush, Naver NanumBrush, NanumPen, Naver NanumPen
+  https://github.com/google/fonts/tree/main/ofl/nanumpenscript
+
+SIL OPEN FONT LICENSE Version 1.1 전문: https://openfontlicense.org/open-font-license-official-text/
+(예약 이름 'Anton'·'Nanum' 등을 파생 서체의 이름으로 쓰지 않는다. 여기서는 원본 이름 그대로 서브셋만 한다.)
