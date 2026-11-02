@@ -1,5 +1,6 @@
 User-Agent: *
 Allow: /
+Allow: /app-ads.txt
 Disallow: /admin
 Disallow: /api
 Disallow: /app
